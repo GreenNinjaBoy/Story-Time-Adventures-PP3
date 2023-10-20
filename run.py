@@ -23,32 +23,25 @@ def intro_to_game():
 
 
 def get_story_tellers_name():
-    """
-    Creating a function that will ask the user
-    to enter their name
-    """
     print_slow("Now!")
     story_tellers_name = input("What shall we call our story teller? ")
-    print_slow(f"Hello, {story_tellers_name}! your adventure begins now!")
-    return name
-    
+    print_slow(f"Hello, {story_tellers_name}! Your adventure begins now!")
+    return story_tellers_name
+
 
 def choosing_a_story(player_name):
-    """
-    The user will now be prompted to choose 
-    their adventure
-    """
-    print_slow(f"Now, {player_name}")
+    print_slow("Its time to pick a story")
+    print_slow(f"Now, {player_name} please choose")
+    print_slow(f"1. {player_name} saves their magical unicorn friend")
+    print_slow(f"2. {player_name}'s big park adventure")
 
 
 def main():
     intro_to_game()
-    get_story_tellers_name()
-
-
-main()
+    player_name = get_story_tellers_name()
+    choosing_a_story(player_name)
 
 
 if __name__ == "__main__":
-    player_name = get_story_tellers_name
-    choosing_a_story()
+    main()
+
