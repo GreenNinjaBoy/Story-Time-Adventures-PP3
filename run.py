@@ -21,47 +21,38 @@ def intro_to_game():
 def get_story_tellers_name():
     print_slow("Now!")
     story_tellers_name = input("What shall we call our story teller? ")
-    print_slow(f"Hello, {story_tellers_name}! Your adventure begins now!")
     return story_tellers_name
 
 
-def save_story_adventure(file_path, player_name, adventure_text):
-    with open(file_path, 'w') as file:
-        adventure_text = adventure_text.replace("{player_name}", player_name)
-        file.write(adventure_text)
+def load_adventure_stories(file_path):
+    with open(file_path, 'r') as file:
+        adventures = file.readlines()
+        return adventures
 
 
-def print_story_adventure(adventure_text, player_name):
-    print_slow(adventure_text)
-    adventure_text = adventure_text.replace(player_name, "{player_name}")
-    return adventure_text
-
-
-def choosing_a_story(player_name, adventure_text):
-    print_slow("It's time to pick a story")
-    print_slow(f"1. {player_name} saves their magical unicorn friend")
-    print_slow(f"2. {player_name}'s big park adventure")
-    print_slow(f"Now, {player_name} please choose")
-    choice = input()
-
-    if choice == "1":
-        save_story_adventure('story_adventure_1.txt', player_name, adventure_text)
-        print_story_adventure(adventure_text, player_name)
-    elif choice == "2":
-        print_slow(f"{player_name}'s big park adventure")
+def choose_path(player_name, adventures):
+    print_slow(f"Hello {player_name}! Once upon a time you find yourself in a magic forest ")
+    print_slow("Before you there are two paths 'left' and 'right'.")
+    print_slow("Which path would you like to take?")
+    choice = input().lower()
+    if choice == "left":
+        print_slow(adventures[0])
+        from my_images import squirel_img
+    elif choice == "right":
+        print_slow(adventures[1])
+        from my_images import portal_img
     else:
-        print_slow("I am sorry, I didn't understand. Please choose either '1' or '2'")
-        choosing_a_story(player_name, adventure_text)
+        print_slow("I am sorry I didn't understand")
+        print_slow("please enter either 'left' or 'right'")
+        choose_path(player_name, adventures)
 
 
 def main():
     intro_to_game()
     player_name = get_story_tellers_name()
-    adventure_text = open('story_adventure_1.txt', 'r').read()
-    adventure_text = choosing_a_story(player_name, adventure_text)
-    save_adventure_text('story_adventure_1.txt', adventure_text)
-    adventure_text = print_story_adventure(adventure_text, player_name)
-    save_adventure_text('story_adventure_1.txt', adventure_text)
+    adventures = load_adventure_stories('story_adventure_1.txt')
+    choose_path(player_name, adventures)
 
+    
 if __name__ == "__main__":
     main()
