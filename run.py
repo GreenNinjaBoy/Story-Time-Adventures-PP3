@@ -3,11 +3,106 @@ from termcolor import colored, cprint
 from pyfiglet import Figlet
 
 
-def print_slow(text):
+class Storybook:
+    def __init__(self, pages):
+        self.pages = pages
+
+
+class Page:
+    def __init__(self, message, choices=None, choices_mapping=None):
+        self.message = message
+        self.choices = choices
+        self.choices_mapping = choices_mapping
+
+
+def print_slow(text, delay=0.05):
     for letter in text:
         print(letter, end='', flush=True)
-        time.sleep(0.05)
+        time.sleep(delay)
     print()
+
+
+def get_choice(choices):
+    for choice in choices:
+        print(choice)
+    print("Please select a choice")
+
+    try:
+        choice = int(input())
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        return get_choice(choices)
+    return choice
+
+
+def get_yes_or_no_choice():
+    print("Please enter 'y' for Yes or 'n' for No")
+    while True:
+        choice = input().lower()
+        if choice == 'y' or choice == 'n':
+            return choice
+        else:
+            print("Invalid input. Please enter 'y' or 'n'.")
+
+
+def tick(current_page):
+    print_slow(current_page.message)
+  
+    if current_page.choices is None:
+        print_slow("Thanks for playing!")
+        import sys; sys.exit()
+
+    if current_page.choices == ['y', 'n']:
+        player_choice = get_yes_or_no_choice()
+    else:
+        player_choice = get_choice(current_page.choices)
+    
+    next_page = current_page.choices_mapping[player_choice]
+    tick(next_page)
+
+
+def main():
+    intro_to_game()
+    player_name = get_story_tellers_name()
+    adventures = load_adventure_stories('story_adventure_1.txt')
+    princess_story = load_princess_story('princess_story.txt')
+
+    page_6 = Page(
+        message=princess_story[18], 
+        choices=None)
+
+    page_5 = Page(
+        message=princess_story[12:18],
+        choices=["y", "n"],
+        choices_mapping={"y": page_6, "n": page_6}
+    )
+
+    page_4 = Page(
+        message=princess_story[18],
+        choices=None,
+        choices_mapping={None}
+    )
+
+    page_3 = Page(
+        message=princess_story[9:11],
+        choices=["1. Trust Squeaky and Follow His Advice:", "2. Ignore Squeaky and Continue on Your Own:"],
+        choices_mapping={1: page_5, 2: page_6}
+    )
+
+    page_2 = Page(
+        message=princess_story[0:7],
+        choices=["1. Follow the Forrest Trail:", "2. Investigate the Abandoned Castle:", "3. Seek the Guidance of the Wise Sage: "],
+        choices_mapping={1: page_3, 2: page_4}
+        )
+
+    page_1 = Page(
+        message=adventures[0:4],
+        choices=["1: Princess Adventure", "2: Space Adventure"],
+        choices_mapping={1: page_2, 2: page_6}
+    )
+
+    story = Storybook([page_1, page_2, page_3, page_4, page_5, page_6])  # Add more pages as needed
+    tick(story.pages[0])
 
 
 def intro_to_game():
@@ -31,92 +126,10 @@ def load_adventure_stories(file_path):
     return adventures
 
 
-def choose_path(player_name, adventures, princess_story):
-    print_slow(adventures[0:4])
-    while True:
-        choice = input("Which path would you like to take? ").lower()
-        if choice == "left":
-            print_slow(adventures[5])
-            princess_adventure(princess_story)
-            break
-        elif choice == "right":
-            print_slow(adventures[6])
-            # Handle space adventure logic here
-            break
-        else:
-            print_slow("I am sorry I didn't understand")
-            print_slow("Please enter either 'left' or 'right'")
-
-
-def main():
-    intro_to_game()
-    player_name = get_story_tellers_name()
-    adventures = load_adventure_stories('story_adventure_1.txt')
-    princess_story = load_princess_story('princess_story.txt')
-    choose_path(player_name, adventures, princess_story)
-
-
 def load_princess_story(file_path):
     with open(file_path, 'r') as file:
         princess_story = file.readlines()
     return princess_story
-
-
-def princess_adventure(princess_story):
-    print_slow('\n'.join(princess_story[:9]))
-
-    paths = [
-        "Follow the Forest Trail",
-        "Investigate the Abandoned Castle",
-        "Seek the Guidance of the Wise Sage"
-    ]
-
-    print_slow("\n".join(f"{i + 1}. {path}" for i, path in enumerate(paths)))
-    print_slow("Please choose a path")
-
-    while True:
-        try:
-            choice = int(input())
-            if 1 <= choice <= 3:
-                break
-            else:
-                print_slow("I am sorry, please choose 1, 2, or 3")
-        except ValueError:
-            print_slow("Invalid input. Please enter a number.")
-
-    if choice == 1:
-        print_slow(princess_story[9])
-        princess_adventure_2(princess_story)
-    elif choice == 2:
-        print_slow(princess_story[14])
-    elif choice == 3:
-        print_slow(princess_story[15])
-
-
-def princess_adventure_2(princess_story):
-    print_slow(princess_story[10])
-
-    options = [
-        "Trust Squeaky and Follow His Advice",
-        "Ignore Squeaky and Continue on Your Own"
-    ]
-
-    print_slow("\n".join(f"{i + 1}. {option}" for i, option in enumerate(options)))
-    print_slow("What would you like to do?")
-
-    while True:
-        try:
-            choice = int(input())
-            if choice == 1:
-                print_slow(princess_story[11])
-            elif choice == 2:
-                print_slow(princess_story[12])
-            else:
-                print_slow("I am sorry, please choose 1 or 2")
-        except ValueError:
-            print_slow("Invalid input. Please enter a number.")
-        else:
-            break
 
 
 if __name__ == "__main__":

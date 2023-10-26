@@ -9,12 +9,24 @@ As you set out, you come across three different paths:
 
 You decide to take the forest trail, hoping to find clues about Princess Isabella's whereabouts in the heart of nature.
 As you venture deeper into the forest, you encounter a talking squirrel named Squeaky. He offers you two options:
+
 You decide to trust the talking squirrel and follow his advice, believing he might lead you to Princess Isabella.
+
+Squeaky leads you through the dense forest, guiding you past traps set by malicious creatures.
+With his help, you navigate the forest safely and reach the heart of the woods where you find an enchanted amulet.
+do you pick the amulet up?
+
+When you pick the amulet up, a magical portal appears infornt of you.
+
+Stepping through it, you discover Princess Isabella trapped in a crystal cage. Utilizing the enchanted amulet,
+you break the cage and free the princess. She thanks you profusely, and together, you return to the kingdom.
+
+
 You ignore the talking squirrel and continue on your own, thinking you can find the princess without his help.
 
 You choose to explore the mysterious abandoned castle on the hill, suspecting that it might hide secrets related to the princess's disappearance.
 You opt to seek the wisdom of the wise sage, hoping to gain valuable insights and guidance on how to rescue the princess.
 
 
-
+This is working
 
