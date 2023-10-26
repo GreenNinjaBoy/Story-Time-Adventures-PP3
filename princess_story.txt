@@ -7,8 +7,12 @@ You, a courageous young adventurer, hear the kingdom's cry for help.
 You embark on a journey to find Princess Isabella and restore peace to the enchanted land. 
 As you set out, you come across three different paths:
 
+#Story if the user decides to follow the forest trail
+
 You decide to take the forest trail, hoping to find clues about Princess Isabella's whereabouts in the heart of nature.
 As you venture deeper into the forest, you encounter a talking squirrel named Squeaky. He offers you two options:
+
+#story if the user decideds to trust the squirrel
 
 You decide to trust the talking squirrel and follow his advice, believing he might lead you to Princess Isabella.
 
@@ -17,10 +21,24 @@ With his help, you navigate the forest safely and reach the heart of the woods w
 do you pick the amulet up?
 
 When you pick the amulet up, a magical portal appears infornt of you.
+Stepping through it, you discover Princess Isabella trapped in a crystal cage.
+The only thing that can free the princess is the enchanted amulet.
+You use the enchanted amulet, to break the cage and free the princess. 
+She thanks you profusely, and together, you return to the kingdom.
 
-Stepping through it, you discover Princess Isabella trapped in a crystal cage. Utilizing the enchanted amulet,
-you break the cage and free the princess. She thanks you profusely, and together, you return to the kingdom.
+With Princess Isabella rescued and the evil sorcerer Malachar defeated, 
+the kingdom celebrates your bravery and heroism. The people hail you as a savior, 
+and the king and queen express their deepest gratitude. 
+The once-enchanting but sorrowful land now flourishes with happiness and prosperity.
 
+And so, your adventure in the enchanted kingdom concludes, but the memories of your heroic deeds will be passed down through generations, 
+inspiring courage and hope in the hearts of future adventurers.
+
+The end... or is it just the beginning of another extraordinary tale?
+
+
+
+# The story if you ignore the squirrel
 
 You ignore the talking squirrel and continue on your own, thinking you can find the princess without his help.
 

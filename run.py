@@ -1,107 +1,78 @@
-import time
 from termcolor import colored, cprint
 from pyfiglet import Figlet
-
+from pages import Page  # Import the Page class from pages.py
+from game_logic import print_slow, get_choice, get_yes_or_no_choice, tick
 
 class Storybook:
     def __init__(self, pages):
         self.pages = pages
 
 
-class Page:
-    def __init__(self, message, choices=None, choices_mapping=None):
-        self.message = message
-        self.choices = choices
-        self.choices_mapping = choices_mapping
+# Load adventure data from a text file
+def load_adventure_data(file_path):
+    with open(file_path, 'r') as file:
+        adventure_data = file.readlines()
+    return adventure_data
+
+# Path to the adventures text file
+adventures_file_path = 'story_adventure_1.txt'
+
+# Load adventure data into the adventures list
+adventures = load_adventure_data(adventures_file_path)
 
 
-def print_slow(text, delay=0.05):
-    for letter in text:
-        print(letter, end='', flush=True)
-        time.sleep(delay)
-    print()
+def load_princess_story(file_path):
+    with open(file_path, 'r') as file:
+        princess_story_data = file.readlines()
+    return princess_story_data
 
+# Path to the princess story text file
+princess_story_file_path = 'princess_story.txt'
 
-def get_choice(choices):
-    for choice in choices:
-        print(choice)
-    print("Please select a choice")
+# Load princess story data into the princess_story list
+princess_story = load_princess_story(princess_story_file_path)
 
-    try:
-        choice = int(input())
-    except ValueError:
-        print("Invalid input. Please enter a number.")
-        return get_choice(choices)
-    return choice
+page_6 = Page(
+    message=princess_story[22:37],
+    choices=None,
+    choices_mapping=None
+)
 
+page_5 = Page(
+    message=princess_story[17:20],
+    choices=["y", "n"],
+    choices_mapping={"y": page_6, "n": page_6}
+)
 
-def get_yes_or_no_choice():
-    print("Please enter 'y' for Yes or 'n' for No")
-    while True:
-        choice = input().lower()
-        if choice == 'y' or choice == 'n':
-            return choice
-        else:
-            print("Invalid input. Please enter 'y' or 'n'.")
+page_4 = Page(
+    message=princess_story[18],
+    choices=None,
+    choices_mapping={None}
+)
 
+page_3 = Page(
+    message=princess_story[11:12],
+    choices=["1. Trust Squeaky and Follow His Advice:", "2. Ignore Squeaky and Continue on Your Own:"],
+    choices_mapping={1: page_5, 2: page_6}
+)
 
-def tick(current_page):
-    print_slow(current_page.message)
-  
-    if current_page.choices is None:
-        print_slow("Thanks for playing!")
-        import sys; sys.exit()
+page_2 = Page(
+    message=princess_story[0:7],
+    choices=["1. Follow the Forrest Trail:", "2. Investigate the Abandoned Castle:", "3. Seek the Guidance of the Wise Sage: "],
+    choices_mapping={1: page_3, 2: page_4}
+)
 
-    if current_page.choices == ['y', 'n']:
-        player_choice = get_yes_or_no_choice()
-    else:
-        player_choice = get_choice(current_page.choices)
-    
-    next_page = current_page.choices_mapping[player_choice]
-    tick(next_page)
+page_1 = Page(
+    message=adventures[0:4],
+    choices=["1: Princess Adventure", "2: Space Adventure"],
+    choices_mapping={1: page_2, 2: page_6}
+)
+
+story = Storybook([page_1, page_2, page_3, page_4, page_5, page_6]) 
 
 
 def main():
     intro_to_game()
-    player_name = get_story_tellers_name()
-    adventures = load_adventure_stories('story_adventure_1.txt')
-    princess_story = load_princess_story('princess_story.txt')
-
-    page_6 = Page(
-        message=princess_story[18], 
-        choices=None)
-
-    page_5 = Page(
-        message=princess_story[12:18],
-        choices=["y", "n"],
-        choices_mapping={"y": page_6, "n": page_6}
-    )
-
-    page_4 = Page(
-        message=princess_story[18],
-        choices=None,
-        choices_mapping={None}
-    )
-
-    page_3 = Page(
-        message=princess_story[9:11],
-        choices=["1. Trust Squeaky and Follow His Advice:", "2. Ignore Squeaky and Continue on Your Own:"],
-        choices_mapping={1: page_5, 2: page_6}
-    )
-
-    page_2 = Page(
-        message=princess_story[0:7],
-        choices=["1. Follow the Forrest Trail:", "2. Investigate the Abandoned Castle:", "3. Seek the Guidance of the Wise Sage: "],
-        choices_mapping={1: page_3, 2: page_4}
-        )
-
-    page_1 = Page(
-        message=adventures[0:4],
-        choices=["1: Princess Adventure", "2: Space Adventure"],
-        choices_mapping={1: page_2, 2: page_6}
-    )
-
-    story = Storybook([page_1, page_2, page_3, page_4, page_5, page_6])  # Add more pages as needed
     tick(story.pages[0])
 
 
@@ -112,24 +83,6 @@ def intro_to_game():
     print_slow(colored('Welcome to Story Time Adventures', color="red"))
     print_slow("Where your choices help tell the story")
     print_slow("You can get a grown-up to help you on your adventure")
-
-
-def get_story_tellers_name():
-    print_slow("Now!")
-    story_tellers_name = input("What shall we call our story teller? ")
-    return story_tellers_name
-
-
-def load_adventure_stories(file_path):
-    with open(file_path, 'r') as file:
-        adventures = file.readlines()
-    return adventures
-
-
-def load_princess_story(file_path):
-    with open(file_path, 'r') as file:
-        princess_story = file.readlines()
-    return princess_story
 
 
 if __name__ == "__main__":
