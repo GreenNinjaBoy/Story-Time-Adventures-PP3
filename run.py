@@ -36,10 +36,15 @@ princess_story_file_path = 'princess_story.txt'
 # Load princess story data into the princess_story list
 princess_story = load_princess_story(princess_story_file_path)
 
-page_6 = Page(
-    message=princess_story[22:37],
+page_7 = Page(
+    message=princess_story[36:43],
     choices=None,
     choices_mapping=None
+)
+page_6 = Page(
+    message=princess_story[22:35],
+    choices=["y", "n"],
+    choices_mapping={"y": page_7, "n": page_7}
 )
 
 page_5 = Page(
@@ -61,7 +66,7 @@ page_3 = Page(
 )
 
 page_2 = Page(
-    message=princess_story[0:7],
+    message=princess_story[0:8],
     choices=["1. Follow the Forrest Trail:", "2. Investigate the Abandoned Castle:", "3. Seek the Guidance of the Wise Sage: "],
     choices_mapping={1: page_3, 2: page_4}
 )
@@ -72,7 +77,7 @@ page_1 = Page(
     choices_mapping={1: page_2, 2: page_6}
 )
 
-story = Storybook([page_1, page_2, page_3, page_4, page_5, page_6]) 
+story = Storybook([page_1, page_2, page_3, page_4, page_5, page_6, page_7]) 
 
 
 def main():

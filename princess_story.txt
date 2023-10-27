@@ -7,7 +7,7 @@ You, a courageous young adventurer, hear the kingdom's cry for help.
 You embark on a journey to find Princess Isabella and restore peace to the enchanted land. 
 As you set out, you come across three different paths:
 
-#Story if the user decides to follow the forest trail
+Story if the user decides to follow the forest trail
 
 You decide to take the forest trail, hoping to find clues about Princess Isabella's whereabouts in the heart of nature.
 As you venture deeper into the forest, you encounter a talking squirrel named Squeaky. He offers you two options:
@@ -19,6 +19,30 @@ You decide to trust the talking squirrel and follow his advice, believing he mig
 Squeaky leads you through the dense forest, guiding you past traps set by malicious creatures.
 With his help, you navigate the forest safely and reach the heart of the woods where you find an enchanted amulet.
 do you pick the amulet up?
+
+#story if the user decides to ignore the squirrel
+
+You thank Squeaky, you you continue your journey alone.
+"Before you go" announced Squeaky " I have something for you.
+Squeaky gives you a magical whistle that will summon
+magical creatures to help you.
+
+The forest grows darker and more ominous as you venture deeper. 
+Suddenly, you find yourself ensnared in a trap set by Malachar's minions.
+Bound and helpless, 
+you witness the sorcerer's dark ritual to drain Princess Isabella's powers.
+
+will you use the magical whistle?
+
+You blow on the magical whistgle and suddenly, 
+Squeaky arrives with a group of forest creatures.
+Together, they free you and provide invaluable assistance. With renewed determination, 
+you confront Malachar, who is temporarily weakened from the spellcasting. 
+In a fierce battle, you manage to break his staff, releasing Princess Isabella from her prison.
+Grateful for your bravery, the princess bestows upon you a magical artifact, 
+ensuring your safety on your journey back to the kingdom
+
+
 
 When you pick the amulet up, a magical portal appears infornt of you.
 Stepping through it, you discover Princess Isabella trapped in a crystal cage.
