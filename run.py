@@ -3,6 +3,7 @@ from pyfiglet import Figlet
 from pages import Page  # Import the Page class from pages.py
 from game_logic import print_slow, get_choice, get_yes_or_no_choice, tick
 
+
 class Storybook:
     def __init__(self, pages):
         self.pages = pages
@@ -13,6 +14,7 @@ def load_adventure_data(file_path):
     with open(file_path, 'r') as file:
         adventure_data = file.readlines()
     return adventure_data
+
 
 # Path to the adventures text file
 adventures_file_path = 'story_adventure_1.txt'
@@ -26,8 +28,10 @@ def load_princess_story(file_path):
         princess_story_data = file.readlines()
     return princess_story_data
 
+
 # Path to the princess story text file
 princess_story_file_path = 'princess_story.txt'
+
 
 # Load princess story data into the princess_story list
 princess_story = load_princess_story(princess_story_file_path)
@@ -51,7 +55,7 @@ page_4 = Page(
 )
 
 page_3 = Page(
-    message=princess_story[11:12],
+    message=princess_story[11:13],
     choices=["1. Trust Squeaky and Follow His Advice:", "2. Ignore Squeaky and Continue on Your Own:"],
     choices_mapping={1: page_5, 2: page_6}
 )
