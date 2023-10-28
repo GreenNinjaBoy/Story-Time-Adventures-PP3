@@ -1,3 +1,6 @@
+A magical portal appers below you,
+you are off to save the princess!!
+
 Once upon a time, in a faraway kingdom, there lived a beautiful princess named Isabella. 
 One fateful night, an evil sorcerer named Malachar cast a dark spell upon the kingdom, 
 causing Princess Isabella to disappear without a trace. The entire kingdom fell into despair, 
@@ -7,18 +10,31 @@ You, a courageous young adventurer, hear the kingdom's cry for help.
 You embark on a journey to find Princess Isabella and restore peace to the enchanted land. 
 As you set out, you come across three different paths:
 
-Story if the user decides to follow the forest trail
+#Story if the user decides to follow the forest trail (will lead to page_3)
 
 You decide to take the forest trail, hoping to find clues about Princess Isabella's whereabouts in the heart of nature.
 As you venture deeper into the forest, you encounter a talking squirrel named Squeaky. He offers you two options:
 
-#story if the user decideds to trust the squirrel
+#story if the user decideds to trust the squirrel (will lead the user to page_5)
 
 You decide to trust the talking squirrel and follow his advice, believing he might lead you to Princess Isabella.
 
 Squeaky leads you through the dense forest, guiding you past traps set by malicious creatures.
 With his help, you navigate the forest safely and reach the heart of the woods where you find an enchanted amulet.
 do you pick the amulet up?
+
+#if the user decides to pick up the amulet. (will lead the user to page_6)
+
+When you pick the amulet up, a magical portal appears infornt of you.
+Stepping through it, you discover Princess Isabella trapped in a crystal cage.
+The only thing that can free the princess is the enchanted amulet.
+
+Do you use the amulet to save the princess?
+
+#If the user decides to use the amulet. (will lead the user to page 8)
+
+You use the enchanted amulet, to break the cage and free the princess. 
+She thanks you profusely, and together, you return to the kingdom.
 
 #story if the user decides to ignore the squirrel
 
@@ -34,21 +50,30 @@ you witness the sorcerer's dark ritual to drain Princess Isabella's powers.
 
 will you use the magical whistle?
 
-You blow on the magical whistgle and suddenly, 
-Squeaky arrives with a group of forest creatures.
-Together, they free you and provide invaluable assistance. With renewed determination, 
-you confront Malachar, who is temporarily weakened from the spellcasting. 
-In a fierce battle, you manage to break his staff, releasing Princess Isabella from her prison.
+#The line below will print if the user chooses 'y' and the story concludes.
+
+You blow on the magical whistle.
+
+#The line below will print if the user chooses 'n' and the story concludes.
+
+You decide you cannot blow the whislte
+as all of you courage has disappeared because of Malachar.
+But suddenly you hear a loud bang!!
+
+
+
+Suddenly, Squeaky arrives with a group of forest creatures.
+Together, they free you and provide invaluable assistance. 
+With your courage restored, you confront Malachar, 
+who is temporarily weakened from the spellcasting.
+
+In a fierce battle, you manage to break his staff, 
+releasing Princess Isabella from her prison.
 Grateful for your bravery, the princess bestows upon you a magical artifact, 
 ensuring your safety on your journey back to the kingdom
 
 
-
-When you pick the amulet up, a magical portal appears infornt of you.
-Stepping through it, you discover Princess Isabella trapped in a crystal cage.
-The only thing that can free the princess is the enchanted amulet.
-You use the enchanted amulet, to break the cage and free the princess. 
-She thanks you profusely, and together, you return to the kingdom.
+#End of the story for the user
 
 With Princess Isabella rescued and the evil sorcerer Malachar defeated, 
 the kingdom celebrates your bravery and heroism. The people hail you as a savior, 
@@ -59,16 +84,3 @@ And so, your adventure in the enchanted kingdom concludes, but the memories of y
 inspiring courage and hope in the hearts of future adventurers.
 
 The end... or is it just the beginning of another extraordinary tale?
-
-
-
-# The story if you ignore the squirrel
-
-You ignore the talking squirrel and continue on your own, thinking you can find the princess without his help.
-
-You choose to explore the mysterious abandoned castle on the hill, suspecting that it might hide secrets related to the princess's disappearance.
-You opt to seek the wisdom of the wise sage, hoping to gain valuable insights and guidance on how to rescue the princess.
-
-
-This is working
-

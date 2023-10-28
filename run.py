@@ -2,6 +2,7 @@ from termcolor import colored, cprint
 from pyfiglet import Figlet
 from pages import Page  # Import the Page class from pages.py
 from game_logic import print_slow, get_choice, get_yes_or_no_choice, tick
+from princess_adventures import page_2, page_3, page_4, page_5, page_6, page_7, page_8, page_9
 
 
 class Storybook:
@@ -36,53 +37,22 @@ princess_story_file_path = 'princess_story.txt'
 # Load princess story data into the princess_story list
 princess_story = load_princess_story(princess_story_file_path)
 
-page_7 = Page(
-    message=princess_story[36:43],
-    choices=None,
-    choices_mapping=None
-)
-page_6 = Page(
-    message=princess_story[22:35],
-    choices=["y", "n"],
-    choices_mapping={"y": page_7, "n": page_7}
-)
-
-page_5 = Page(
-    message=princess_story[17:20],
-    choices=["y", "n"],
-    choices_mapping={"y": page_6, "n": page_6}
-)
-
-page_4 = Page(
-    message=princess_story[18],
-    choices=None,
-    choices_mapping={None}
-)
-
-page_3 = Page(
-    message=princess_story[11:13],
-    choices=["1. Trust Squeaky and Follow His Advice:", "2. Ignore Squeaky and Continue on Your Own:"],
-    choices_mapping={1: page_5, 2: page_6}
-)
-
-page_2 = Page(
-    message=princess_story[0:8],
-    choices=["1. Follow the Forrest Trail:", "2. Investigate the Abandoned Castle:", "3. Seek the Guidance of the Wise Sage: "],
-    choices_mapping={1: page_3, 2: page_4}
-)
-
+# This page will promt the user to pick an adventure, 
+# if the user picks 1 then princess_adventure.py will begin
+# If the user picks '2' thes space_adventure.py will begin
 page_1 = Page(
     message=adventures[0:4],
     choices=["1: Princess Adventure", "2: Space Adventure"],
     choices_mapping={1: page_2, 2: page_6}
 )
 
-story = Storybook([page_1, page_2, page_3, page_4, page_5, page_6, page_7]) 
+story = Storybook([page_1, page_2, page_3, page_4, page_5, page_6, page_7, page_8]) 
 
 
 def main():
     intro_to_game()
-    tick(story.pages[0])
+    princess_story_data = load_princess_story('princess_story.txt')
+    tick(story.pages[0], princess_story_data)
 
 
 def intro_to_game():
