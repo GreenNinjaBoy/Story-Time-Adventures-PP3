@@ -2,7 +2,7 @@ from termcolor import colored, cprint
 from pyfiglet import Figlet
 from pages import Page  # Import the Page class from pages.py
 from game_logic import print_slow, get_choice, get_yes_or_no_choice, tick
-from princess_adventures import page_2, page_3, page_4, page_5, page_6, page_7, page_8, page_9
+from princess_adventures import page_2, page_3, page_4, page_5, page_6, page_7, page_8, page_9, page_10
 
 
 class Storybook:
@@ -46,7 +46,7 @@ page_1 = Page(
     choices_mapping={1: page_2, 2: page_6}
 )
 
-story = Storybook([page_1, page_2, page_3, page_4, page_5, page_6, page_7, page_8]) 
+story = Storybook([page_1, page_2, page_3, page_4, page_5, page_6, page_7, page_8, page_9, page_10]) 
 
 
 def main():

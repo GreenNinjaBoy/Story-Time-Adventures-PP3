@@ -8,12 +8,24 @@ and it was believed that only a brave and noble soul could rescue the princess a
 
 You, a courageous young adventurer, hear the kingdom's cry for help. 
 You embark on a journey to find Princess Isabella and restore peace to the enchanted land. 
-As you set out, you come across three different paths:
+As you set out, you see a dark forest ahead.
+
+what would you like to do?
 
 #Story if the user decides to follow the forest trail (will lead to page_3)
 
 You decide to take the forest trail, hoping to find clues about Princess Isabella's whereabouts in the heart of nature.
 As you venture deeper into the forest, you encounter a talking squirrel named Squeaky. He offers you two options:
+
+# If the user looks fo another path
+
+You look for another path to take
+However you get lost 
+And end up back at the entrance of the forest.
+You have no option brave adventurer but to take 
+the forest path!
+As you venture deeper into the forest, you encounter a talking squirrel named Squeaky. He offers you two options:
+
 
 #story if the user decideds to trust the squirrel (will lead the user to page_5)
 
@@ -23,13 +35,25 @@ Squeaky leads you through the dense forest, guiding you past traps set by malici
 With his help, you navigate the forest safely and reach the heart of the woods where you find an enchanted amulet.
 do you pick the amulet up?
 
-#if the user decides to pick up the amulet. (will lead the user to page_6)
+#if the user decides to pick up the amulet.
 
 When you pick the amulet up, a magical portal appears infornt of you.
 Stepping through it, you discover Princess Isabella trapped in a crystal cage.
 The only thing that can free the princess is the enchanted amulet.
 
 Do you use the amulet to save the princess?
+
+
+#If the user decides not to take the amulet
+
+You decide not to take the amulet.
+You and Squeaky continue on you journey into the deep dark forrest.
+Squeaky stops
+"I am sorry brave adventurer but I must go"
+"But before I do please take this"
+"It will help on your Journey"
+
+Squeaky hands you a magical whistle.
 
 #If the user decides to use the amulet. (will lead the user to page 8)
 
@@ -38,8 +62,9 @@ She thanks you profusely, and together, you return to the kingdom.
 
 #story if the user decides to ignore the squirrel
 
-You thank Squeaky, you you continue your journey alone.
-"Before you go" announced Squeaky " I have something for you.
+You decide to ignore the squirrel and, 
+you you continue your journey alone.
+"Before you go" announced Squeaky "I have something for you".
 Squeaky gives you a magical whistle that will summon
 magical creatures to help you.
 
@@ -80,7 +105,8 @@ the kingdom celebrates your bravery and heroism. The people hail you as a savior
 and the king and queen express their deepest gratitude. 
 The once-enchanting but sorrowful land now flourishes with happiness and prosperity.
 
-And so, your adventure in the enchanted kingdom concludes, but the memories of your heroic deeds will be passed down through generations, 
+And so, your adventure in the enchanted kingdom concludes, 
+but the memories of your heroic deeds will be passed down through generations, 
 inspiring courage and hope in the hearts of future adventurers.
 
 The end... or is it just the beginning of another extraordinary tale?
