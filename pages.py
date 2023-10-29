@@ -1,5 +1,5 @@
 class Page:
-    def __init__(self, message, message_2, choices=None, choices_mapping=None):
+    def __init__(self, message, message_2=None, choices=None, choices_mapping=None):
         self.message = message
         self.message_2 = message_2
         self.choices = choices

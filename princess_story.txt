@@ -52,6 +52,14 @@ as he slowely turns into stone.
 The princess thanks you with a big hug, 
 and together, you return to the kingdom.
 
+#If the user decideds not to use the amulet
+
+Before you decide to use the amulet
+you find yourself in a trap made by the naughty wizard.
+and destroys the amulet!!
+Bound and helpless, 
+you witness the sorcerer's dark ritual to drain Princess Isabella's powers.
+
 #If the user decides not to take the amulet
 
 You decide not to take the amulet.
@@ -87,8 +95,6 @@ You blow on the magical whistle.
 You decide you cannot blow the whislte
 as all of you courage has disappeared because of Malachar.
 But suddenly you hear a loud bang!!
-
-
 
 Suddenly, Squeaky arrives with a group of forest creatures.
 Together, they free you and provide invaluable assistance. 
