@@ -45,7 +45,7 @@ def get_yes_or_no_choice():
             print("Invalid input. Please enter 'y' or 'n'.")
 
 
-def tick(current_page, princess_story_data):
+def tick(current_page, princess_story_data, space_adventure_data):
     message_1 = current_page.message
     message_2 = current_page.message_2
 
@@ -78,4 +78,4 @@ def tick(current_page, princess_story_data):
         player_choice = get_choice(current_page.choices)
 
     next_page = current_page.choices_mapping[player_choice]
-    tick(next_page, princess_story_data)
+    tick(next_page, princess_story_data, space_adventure_data)

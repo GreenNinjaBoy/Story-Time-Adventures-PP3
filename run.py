@@ -3,7 +3,7 @@ from pyfiglet import Figlet
 from pages import Page  # Import the Page class from pages.py
 from game_logic import print_slow, get_choice, get_yes_or_no_choice, tick
 from princess_adventures import pa_page_1, pa_page_1_2, pa_page_2, pa_page_3, pa_page_4, pa_page_5, pa_page_7, page_8, pa_page_9, pa_page_10, pa_page_11
-
+from space_adventure import sa_page_1, sa_page_2, sa_page_3
 
 class Storybook:
     def __init__(self, pages):
@@ -37,6 +37,15 @@ princess_story_file_path = 'princess_story.txt'
 # Load princess story data into the princess_story list
 princess_story = load_princess_story(princess_story_file_path)
 
+def load_space_adventure(file_path):
+    with open(file_path, 'r') as file:
+        space_adventure_data = file.readlines()
+    return space_adventure_data
+
+
+space_adventure_file_path = 'space_adventure.txt'
+space_adventure = load_space_adventure(space_adventure_file_path)
+
 # This page will promt the user to pick an adventure, 
 # if the user picks 1 then princess_adventure.py will begin
 # If the user picks '2' thes space_adventure.py will begin
@@ -44,7 +53,7 @@ page_1 = Page(
     message=adventures[0:4],
     message_2=None,
     choices=["1: Princess Adventure", "2: Space Adventure"],
-    choices_mapping={1: pa_page_1, 2: pa_page_1}
+    choices_mapping={1: pa_page_1, 2: sa_page_1}
 )
 
 story = Storybook([page_1,
@@ -62,7 +71,8 @@ story = Storybook([page_1,
 def main():
     intro_to_game()
     princess_story_data = load_princess_story('princess_story.txt')
-    tick(story.pages[0], princess_story_data)
+    space_adventure_data = load_space_adventure('space_adventure.txt')
+    tick(story.pages[0], princess_story_data, space_adventure_data)
 
 
 def intro_to_game():
