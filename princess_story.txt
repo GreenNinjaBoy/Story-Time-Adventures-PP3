@@ -43,6 +43,14 @@ The only thing that can free the princess is the enchanted amulet.
 
 Do you use the amulet to save the princess?
 
+#if the user decides to use the amulet
+
+You use the enchanted amulet, 
+you break the cage and free the princess. 
+Malachar shouts a final no!!!!!
+as he slowely turns into stone.
+The princess thanks you with a big hug, 
+and together, you return to the kingdom.
 
 #If the user decides not to take the amulet
 
@@ -54,11 +62,6 @@ Squeaky stops
 "It will help on your Journey"
 
 Squeaky hands you a magical whistle.
-
-#If the user decides to use the amulet. (will lead the user to page 8)
-
-You use the enchanted amulet, to break the cage and free the princess. 
-She thanks you profusely, and together, you return to the kingdom.
 
 #story if the user decides to ignore the squirrel
 

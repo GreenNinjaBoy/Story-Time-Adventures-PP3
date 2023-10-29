@@ -46,37 +46,32 @@ def get_yes_or_no_choice():
 
 
 def tick(current_page, princess_story_data):
-    if isinstance(current_page.message, list):
-        for line in current_page.message:
+    message_1 = current_page.message
+    message_2 = current_page.message_2
+
+    if isinstance(message_1, list):
+        for line in message_1:
             print_slow(line)
+            time.sleep(0.1)  # Add a slightly longer delay between lines for clarity
     else:
-        print_slow(current_page.message)
+        print_slow(message_1)
     
+    if isinstance(message_2, list):
+        for line in message_2:
+            print_slow(line)  # Add a slightly longer delay between lines for clarity
+    elif message_2:
+        print_slow(message_2)  # Print message_2 slowly
+
     if current_page.choices is None:
         print_slow("Thanks for playing!")
         sys.exit()
 
-    if current_page.choices == ['end_game_2']:
-        start_index = 64  # Define the appropriate start index for the end game message
-        end_index = 73  # Define the appropriate end index for the end game message
-        end_game_message = ''.join(princess_story_data[start_index:end_index])
-        print_slow(end_game_message)
-        additional_message = ''.join(princess_story_data[77:86])
-        print_slow(additional_message)
-        print_slow("Thanks for playing!")
-        sys.exit()
-
     if current_page.choices == ['end_game']:
-        start_index = 36  # Define the appropriate start index for the end game message
-        end_index = 43  # Define the appropriate end index for the end game message
-        end_game_message = ''.join(princess_story_data[start_index:end_index])
+        end_game_message = ''.join(princess_story_data[110:121])
         print_slow(end_game_message)
-        additional_message = ''.join(princess_story_data[77:86])
-        print_slow(additional_message)
         print_slow("Thanks for playing!")
         sys.exit()
 
-    # Handle other choices
     if current_page.choices == ['y', 'n']:
         player_choice = get_yes_or_no_choice()
     else:
