@@ -9,8 +9,19 @@ def load_space_adventure(file_path):
 space_adventure_file_path = 'space_adventure.txt'
 space_adventure = load_space_adventure(space_adventure_file_path)
 
+sa_page_20 = Page(
+    message=space_adventure[75:91],
+    choices=["end_game_2"]
+)
+
+sa_page_18 = Page(
+    message=space_adventure[58:74],
+    choices=["end_game_2"]
+)
 sa_page_16 = Page(
-    message=["this is the search for clues story"]
+    message=space_adventure[48:57],
+    choices=["1. Do you want to confront the candy-stealing alien and ask why it took the candies?", "2. Do you want to follow the footprints further into the cave?"],
+    choices_mapping={1: sa_page_18, 2: sa_page_20}
 )
 
 sa_page_14 = Page(
