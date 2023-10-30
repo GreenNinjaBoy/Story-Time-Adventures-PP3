@@ -29,6 +29,14 @@ sa_page_14 = Page(
     choices=["end_game_2"]
 )
 
+sa_page_13 = Page(
+    message="This is to see where the comet comes form story"
+)
+sa_page_12 = Page(
+    message=space_adventure[96:106],
+    choices=["end_game_2"]
+)
+
 sa_page_10 = Page(
     message=space_adventure[33:36],
     choices=["1. Do you want to build a candy trap to catch the alien?", "2. Do you want to search for clues around the Candy Planet?"],
@@ -40,7 +48,9 @@ sa_page_8 = Page(
 )
 
 sa_page_6 = Page(
-    message="this is sparkling comets story"
+    message=space_adventure[92:95],
+    choices=["1. Do you want to catch a comet and make a wish?", "2. Do want to see where the comets come from?"],
+    choices_mapping={1: sa_page_12, 2: sa_page_13}
 )
 
 sa_page_4 = Page(
