@@ -13,7 +13,7 @@ def print_slow(text,):
 def get_choice(choices):
     while True:
         try:
-            user_input = int(input("Please nter your choice: "))
+            user_input = int(input("Please enter your choice: "))
             if user_input in choices:
                 return user_input
             else:
