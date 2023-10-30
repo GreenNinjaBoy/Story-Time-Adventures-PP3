@@ -3,10 +3,10 @@ from princess_story import princess_story_data
 from termcolor import colored  # Import colored function for colorful output
 
 
-def print_slow(text,):
+def print_slow(text, delay=0.05):
     for letter in text:
         print(letter, end='', flush=True)
-        time.sleep(0.05)
+        time.sleep(delay)
     print()
 
 
@@ -36,6 +36,12 @@ def start_interactive_story(story_data):
                     print_slow(f"{choice}. {data['text']}")  # Print choices slowly
                 user_choice = get_choice(page['choices'])
                 current_page = page['choices'][user_choice]['destination']
+            else:
+                if 'conclusion' in page:
+                    print_slow(page['conclusion'])  # Print conclusion slowly
+                else:
+                    print_slow("The End.")  # Default end message
+                current_page = 0
         else:
-            print_slow("The End.")  # Print "The End" slowly
+            print_slow("Invalid page configuration. The story cannot continue.")
             current_page = 0
