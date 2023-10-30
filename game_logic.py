@@ -71,6 +71,12 @@ def tick(current_page, princess_story_data, space_adventure_data):
         print_slow(end_game_message)
         print_slow("Thanks for playing!")
         sys.exit()
+    
+    if current_page.choices == ["end_game_2"]:
+        end_game_message_2 = ''.join(space_adventure_data[34:56])
+        print_slow(end_game_message_2)
+        print_slow("Thanks for Playing")
+        sys.exit()
 
     if current_page.choices == ['y', 'n']:
         player_choice = get_yes_or_no_choice()

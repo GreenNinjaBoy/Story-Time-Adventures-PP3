@@ -14,7 +14,8 @@ sa_page_10 = Page(
     message="this is visit planet inhabitants story"
 )
 sa_page_8 = Page(
-    message="this is candy feast story"
+    message=space_adventure[21:31],
+    choices=["end_game_2"]
 )
 
 sa_page_6 = Page(
