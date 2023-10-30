@@ -9,12 +9,22 @@ def load_space_adventure(file_path):
 space_adventure_file_path = 'space_adventure.txt'
 space_adventure = load_space_adventure(space_adventure_file_path)
 
+sa_page_6 = Page(
+    message="this is sparkling comets story"
+)
+
+sa_page_4 = Page(
+    message="This is Candy Planet Story"
+)
+
 sa_page_3 = Page(
     message="this is Nebula story"
 )
 
 sa_page_2 = Page(
-    message="this is stardust story"
+    message=space_adventure[11:15],
+    choices={"1. Do you want to land on the Candy Planet?:", "2. Do you want to chase the sparkling comets?:"},
+    choices_mapping={1: sa_page_4, 2: sa_page_6}
 )
 
 sa_page_1 = Page(
