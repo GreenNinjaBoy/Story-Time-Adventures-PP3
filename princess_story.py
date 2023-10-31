@@ -1,10 +1,16 @@
 princess_story_data = {
     1: {
-        'prompt': "Once upon a time, in a kingdom far, far away, there lived a brave and kind princess named Lily. "
-                  "One sunny morning, Princess Lily woke up to find her beloved cat, Whiskers, missing! "
-                  "Determined to find her furry friend, she embarked on a magical adventure through the Enchanted Forest. "
-                  "She came across three different paths: a sparkling river on the left, a mysterious cave in the middle, "
-                  "and a colorful meadow on the right. Which path will Princess Lily choose?\n",
+        'prompt':
+        "Once upon a time, in a kingdom far, far away,"
+        "there lived a brave and kind princess named Lily."
+        "One sunny morning,"
+        "Princess Lily woke up to find her beloved cat, Whiskers, missing! "
+        "Determined to find her furry friend,"
+        "she embarked on a magical adventure through the Enchanted Forest. "
+        "She came across three different paths:"
+        "a sparkling river on the left, a mysterious cave in the middle, "
+        "and a colorful meadow on the right."
+        "Which path will Princess Lily choose?\n",
         'choices': {
             1: {
                 'text': 'Explore the sparkling river',
@@ -21,9 +27,15 @@ princess_story_data = {
         }
     },
     2: {
-        'prompt': "Princess Lily followed the sparkling river. As she walked along the riverbank, she noticed a friendly frog "
-                  "sitting on a lily pad. The frog croaked, 'Greetings, Princess Lily! To continue your journey, you'll need "
-                  "to solve my riddle. What has a golden crown but cannot wear it?' What will Princess Lily answer?\n",
+        'prompt': "Princess Lily followed the sparkling river."
+                  "As she walked along the riverbank,"
+                  "she noticed a friendly frog "
+                  "sitting on a lily pad. The frog croaked,"
+                  "'Greetings, Princess Lily!'"
+                  "To continue your journey, you'll need"
+                  "to solve my riddle."
+                  "'What has a golden crown but cannot wear it?'" 
+                  "What will Princess Lily answer?\n",
         'choices': {
             1: {
                 'text': 'A pineapple',
@@ -40,9 +52,13 @@ princess_story_data = {
         }
     },
     3: {
-        'prompt': "Choosing the mysterious cave, Princess Lily ventured inside. The cave was dark and damp, but Lily's bravery "
-                  "guided her forward. Deep within the cave, she encountered a group of glowing mushrooms. Each mushroom emitted "
-                  "a different color: red, blue, and green. Which colored mushroom will Princess Lily touch?\n",
+        'prompt': 
+        "Choosing the mysterious cave, Princess Lily ventured inside." 
+        "The cave was dark and damp, but Lily's bravery "
+        "guided her forward. Deep within the cave," 
+        "she encountered a group of glowing mushrooms. Each mushroom emitted "
+        "a different color: red, blue, and green." 
+        "Which colored mushroom will Princess Lily touch?\n",
         'choices': {
             1: {
                 'text': 'Red mushroom',
@@ -59,10 +75,15 @@ princess_story_data = {
         }
     },
     4: {
-        'prompt': "Princess Lily chose the colorful meadow, where she found a wise old owl perched on a tree branch. The owl "
-                  "happily shared a piece of advice with Lily: 'In the Enchanted Forest, some creatures are friendly, while "
-                  "others can be tricky. Choose your path wisely.' Feeling grateful, Princess Lily continued her journey deeper "
-                  "into the forest. As she walked, she heard a rustling noise behind her. What will she do?\n",
+        'prompt': 
+        "Princess Lily chose the colorful meadow,"
+        "where she found a wise old owl perched on a tree branch."
+        "The owl happily shared a piece of advice with Lily:"
+        "'In the Enchanted Forest, some creatures are friendly, while'"
+        "others can be tricky. Choose your path wisely.
+        "Feeling grateful, Princess Lily continued her journey deeper "
+        "into the forest. As she walked, she heard a rustling noise behind her." 
+        "What will she do?\n",
         'choices': {
             1: {
                 'text': 'Turn around and investigate',
@@ -79,9 +100,11 @@ princess_story_data = {
         }
     },
     5: {
-        'prompt': "Princess Lily turned around to investigate the noise. To her surprise, she found a mischievous squirrel "
-                  "playing with Whiskers. Relieved and amused, Lily picked up Whiskers and continued her journey, now with a "
-                  "cheerful companion by her side.\n",
+        'prompt': "Princess Lily turned around to investigate the noise."
+                  "To her surprise, she found a mischievous squirrel "
+                  "playing with Whiskers. Relieved and amused,"
+                  "Lily picked up Whiskers and continued her journey," 
+                  "now with a cheerful companion by her side.\n",
         'choices': {
             1: {
                 'text': 'Play with the squirrel',
