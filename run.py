@@ -3,6 +3,7 @@ from space_adventure import space_adventure_data
 from game_logic import start_interactive_story, print_slow
 from termcolor import colored, cprint
 from pyfiglet import Figlet
+import images
 
 
 def main():
