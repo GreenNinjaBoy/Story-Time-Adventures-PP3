@@ -25,6 +25,7 @@ def main():
     else:
         print_slow("Invalid choice. Please choose 1 or 2.")
 
+
 if __name__ == "__main__":
     main()
     

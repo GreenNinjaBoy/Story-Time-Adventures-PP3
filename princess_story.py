@@ -6,7 +6,9 @@ princess_story_data = {
         'prompt_before_image':
         "Once upon a time, in a kingdom far, far away,"
         "there lived a brave and kind princess named Lily.",
+
         'image_path': 'princess',
+        
         'prompt_after_image':
         "One sunny morning,"
         "Princess Lily woke up to find her beloved cat, Whiskers, missing! "

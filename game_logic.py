@@ -40,7 +40,8 @@ def start_interactive_story(story_data):
             print_slow(page.get('prompt_before_image', ''))
             image_path = page.get('image_path')
             if image_path:
-                display_image(images.images, image_path)  # Pass the images dictionary and image_path
+                # Pass the images dictionary and image_path
+                display_image(images.images, image_path)
             print_slow(page.get('prompt_after_image', ''))
             print_slow(page.get('prompt', ''))
             if page['choices']:
@@ -56,5 +57,6 @@ def start_interactive_story(story_data):
                     print_slow("The End.")
                 current_page = 0
         else:
-            print_slow("Invalid page configuration. The story cannot continue.")
+            print_slow(
+                "Invalid page configuration. The story cannot continue.")
             current_page = 0
