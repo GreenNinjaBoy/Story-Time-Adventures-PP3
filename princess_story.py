@@ -80,7 +80,7 @@ princess_story_data = {
         "where she found a wise old owl perched on a tree branch."
         "The owl happily shared a piece of advice with Lily:"
         "'In the Enchanted Forest, some creatures are friendly, while'"
-        "others can be tricky. Choose your path wisely.
+        "others can be tricky. Choose your path wisely."
         "Feeling grateful, Princess Lily continued her journey deeper "
         "into the forest. As she walked, she heard a rustling noise behind her." 
         "What will she do?\n",
