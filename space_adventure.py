@@ -29,7 +29,7 @@ sa_page_4 = Page(
 )
 
 sa_page_3 = Page(
-    message= "or would you prefer to investigate"
+    message="or would you prefer to investigate"
 )
 
 sa_page_2 = Page(

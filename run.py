@@ -2,7 +2,7 @@ from termcolor import colored, cprint
 from pyfiglet import Figlet
 from pages import Page  # Import the Page class from pages.py
 from game_logic import print_slow, tick
-from princess_story import pa_page_1, pa_page_2, pa_page_3, pa_page_4, pa_page_5, pa_page_6, pa_page_7, pa_page_8, pa_page_9, pa_page_10, pa_page_11
+from princess_story import pa_page_1, pa_page_2, pa_page_3, pa_page_4, pa_page_5, pa_page_6, pa_page_7, pa_page_8, pa_page_9
 from space_adventure import sa_page_1 
 
 
@@ -60,7 +60,7 @@ story = Storybook([page_1,
                    pa_page_6,
                    pa_page_7,
                    pa_page_8,
-                   pa_page_10]) 
+                   pa_page_9]) 
 
 
 def main():

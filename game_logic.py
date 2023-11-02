@@ -7,6 +7,7 @@ def load_princess_story(file_path):
         princess_story_data = file.read().splitlines()
     return princess_story_data
 
+
 princess_story_file_path = 'princess_story.txt'
 princess_story = load_princess_story(princess_story_file_path)
 
@@ -15,6 +16,7 @@ def load_space_adventure(file_path):
     with open(file_path, 'r') as file:
         space_adventure_data = file.read().splitlines()
     return space_adventure_data
+
 
 space_adventure_file_path = 'space_adventure.txt'
 space_adventure = load_space_adventure(space_adventure_file_path)
@@ -48,6 +50,7 @@ def get_yes_or_no_choice():
         else:
             print("Invalid input. Please enter 'y' or 'n'.")
 
+
 def tick(current_page, princess_story_data, space_adventure_data):
     message_1 = current_page.message
     message_2 = current_page.message_2
@@ -58,7 +61,7 @@ def tick(current_page, princess_story_data, space_adventure_data):
             time.sleep(0.1)  # Add a slightly longer delay between lines for clarity
     else:
         print_slow(message_1)
-    
+
     if isinstance(message_2, list):
         for line in message_2:
             print_slow(line)  # Add a slightly longer delay between lines for clarity
@@ -70,7 +73,7 @@ def tick(current_page, princess_story_data, space_adventure_data):
         sys.exit()
 
     if current_page.choices == ['end_game']:
-        end_game_message = ''.join(princess_story_data[41:52])
+        end_game_message = ''.join(princess_story_data[87:98])
         print_slow(end_game_message)
         print_slow("Thanks for playing!")
         sys.exit()
