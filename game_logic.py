@@ -1,12 +1,12 @@
 import time
 import sys
-from pages import Page
 
 
 def load_princess_story(file_path):
     with open(file_path, 'r') as file:
-        princess_story_data = file.readlines()
+        princess_story_data = file.read().splitlines()
     return princess_story_data
+
 princess_story_file_path = 'princess_story.txt'
 princess_story = load_princess_story(princess_story_file_path)
 
@@ -40,7 +40,7 @@ def get_yes_or_no_choice():
             print("Invalid input. Please enter 'y' or 'n'.")
 
 def tick(current_page, princess_story_data, space_adventure_data):
-    message_1 = current_page.message
+    message = current_page.message
     message_2 = current_page.message_2
 
     player_choice = get_choice(current_page.choices)

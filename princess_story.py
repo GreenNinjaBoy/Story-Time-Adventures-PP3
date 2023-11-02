@@ -2,8 +2,9 @@ from pages import Page
 
 def load_princess_story(file_path):
     with open(file_path, 'r') as file:
-        princess_story_data = file.readlines()
+        princess_story_data = file.read().splitlines()
     return princess_story_data
+
 princess_story_file_path = 'princess_story.txt'
 princess_story = load_princess_story(princess_story_file_path)
 
@@ -79,7 +80,7 @@ pa_page_1_2 = Page(
 
 # story begins and the first two options are presented to thew user
 pa_page_1 = Page(
-    message=princess_story[0:13],
+    message=princess_story[0:5],
     message_2=None,
     choices=["1. Follow the Forrest Trail:", "2. Find another path"],
     choices_mapping={1: pa_page_2, 2: pa_page_1_2}

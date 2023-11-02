@@ -19,9 +19,8 @@ def load_adventure_data(file_path):
 
 def load_princess_story(file_path):
     with open(file_path, 'r') as file:
-        princess_story_data = file.readlines()
+        princess_story_data = file.read().splitlines()
     return princess_story_data
-
 
 # Path to the princess story text file
 princess_story_file_path = 'princess_story.txt'
@@ -46,7 +45,7 @@ space_adventure = load_space_adventure(space_adventure_file_path)
 page_1 = Page(
     message="Select an Adventure:",
     message_2=None,
-    choices=["1: The Brave Princess and the Enchanted Forest", "2: The Cosmic Space Adventure"],
+    choices=["1: The Brave Princess", "2: The Cosmic Space Adventure"],
     choices_mapping={1: pa_page_1, 2: sa_page_1}
 )
 
