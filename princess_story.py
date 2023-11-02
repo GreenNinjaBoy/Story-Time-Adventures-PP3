@@ -64,17 +64,9 @@ pa_page_3 = Page(
 
 # two new options are presented to the user.
 pa_page_2 = Page(
-    message=princess_story[16:18],
+    message=princess_story[6:12],
     message_2=None,
-    choices=["1. Trust Squeaky and Follow His Advice:", "2. Ignore Squeaky and Continue on Your Own:"],
-    choices_mapping={1: pa_page_3, 2: pa_page_4}
-)
-
-# two new options are presented to the user.
-pa_page_1_2 = Page(
-    message=princess_story[21:27],
-    message_2=None,
-    choices=["1. Trust Squeaky and Follow His Advice:", "2. Ignore Squeaky and Continue on Your Own:"],
+    choices=["1. A pineapple:", "2. A sunflower:", "3. A pumpkin:"],
     choices_mapping={1: pa_page_3, 2: pa_page_4}
 )
 
@@ -82,6 +74,6 @@ pa_page_1_2 = Page(
 pa_page_1 = Page(
     message=princess_story[0:5],
     message_2=None,
-    choices=["1. Follow the Forrest Trail:", "2. Find another path"],
-    choices_mapping={1: pa_page_2, 2: pa_page_1_2}
+    choices=["1. A sparkling river:", "2. A mysterious cave:", "3. A colorful meadow:"],
+    choices_mapping={1: pa_page_2, 2: pa_page_3, pa_page_4}
 )
