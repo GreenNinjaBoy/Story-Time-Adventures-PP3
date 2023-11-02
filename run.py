@@ -2,8 +2,9 @@ from termcolor import colored, cprint
 from pyfiglet import Figlet
 from pages import Page  # Import the Page class from pages.py
 from game_logic import print_slow, tick
-from princess_story import pa_page_1, pa_page_1_2, pa_page_2, pa_page_3, pa_page_4, pa_page_5, pa_page_7, pa_page_9, pa_page_10, pa_page_11
+from princess_story import pa_page_1, pa_page_2, pa_page_3, pa_page_4, pa_page_5, pa_page_6, pa_page_7, pa_page_8, pa_page_9, pa_page_10, pa_page_11
 from space_adventure import sa_page_1 
+
 
 class Storybook:
     def __init__(self, pages):
@@ -22,12 +23,13 @@ def load_princess_story(file_path):
         princess_story_data = file.read().splitlines()
     return princess_story_data
 
+
 # Path to the princess story text file
 princess_story_file_path = 'princess_story.txt'
 
-
 # Load princess story data into the princess_story list
 princess_story = load_princess_story(princess_story_file_path)
+
 
 def load_space_adventure(file_path):
     with open(file_path, 'r') as file:
@@ -51,12 +53,13 @@ page_1 = Page(
 
 story = Storybook([page_1,
                    pa_page_1,
-                   pa_page_1_2,
                    pa_page_2,
                    pa_page_3,
                    pa_page_4,
                    pa_page_5,
+                   pa_page_6,
                    pa_page_7,
+                   pa_page_8,
                    pa_page_10]) 
 
 

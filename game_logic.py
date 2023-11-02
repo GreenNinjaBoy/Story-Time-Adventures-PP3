@@ -70,7 +70,7 @@ def tick(current_page, princess_story_data, space_adventure_data):
         sys.exit()
 
     if current_page.choices == ['end_game']:
-        end_game_message = ''.join(princess_story_data[110:121])
+        end_game_message = ''.join(princess_story_data[41:52])
         print_slow(end_game_message)
         print_slow("Thanks for playing!")
         sys.exit()
