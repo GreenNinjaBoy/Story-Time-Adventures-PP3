@@ -1,35 +1,50 @@
 import time
 import sys
 
-
+"""
+Load princess story data from a text file and return it as a list of strings.
+Args: file_path (str): Path to the text file containing princess story data.
+Returns: list: List of strings containing princess story data.
+"""
 def load_princess_story(file_path):
+    
     with open(file_path, 'r') as file:
         princess_story_data = file.read().splitlines()
     return princess_story_data
 
 
-princess_story_file_path = 'princess_story.txt'
-princess_story = load_princess_story(princess_story_file_path)
-
-
+"""
+Load space adventure data from a text file and return it as a list of strings.
+Args: file_path (str): Path to the text file containing space adventure data.
+Returns: list: List of strings containing space adventure data.
+"""
 def load_space_adventure(file_path):
+
     with open(file_path, 'r') as file:
         space_adventure_data = file.read().splitlines()
     return space_adventure_data
 
 
-space_adventure_file_path = 'space_adventure.txt'
-space_adventure = load_space_adventure(space_adventure_file_path)
-
-
+"""
+Print a text slowly, one character at a time, to create a typewriter effect.
+Args:
+text (str): The text to be printed slowly.
+"""
 def print_slow(text):
+    
     for letter in text:
         print(letter, end='', flush=True)
         time.sleep(0.05)
     print()
 
 
+"""
+Get user input for choices and validate it.
+Args: choices (list): List of choices for the user.
+Returns: int: User's choice as an integer.
+"""
 def get_choice(choices):
+    
     for choice in choices:
         print(choice)
     print("Please select a choice")
@@ -41,7 +56,12 @@ def get_choice(choices):
     return choice
 
 
+"""
+Get user input for Yes/No choices and validate it.
+Returns: str: 'y' for Yes, 'n' for No.
+"""
 def get_yes_or_no_choice():
+    
     print("Please enter 'y' for Yes or 'n' for No")
     while True:
         choice = input().lower()
@@ -51,7 +71,14 @@ def get_yes_or_no_choice():
             print("Invalid input. Please enter 'y' or 'n'.")
 
 
+"""
+Display the story messages and handle user interactions recursively.
+Args:current_page (Page): The current page of the story.
+     princess_story_data (list): List of strings containing princess story data.
+     space_adventure_data (list): List of strings containing space adventure data.
+"""
 def tick(current_page, princess_story_data, space_adventure_data):
+    
     message_1 = current_page.message
     message_2 = current_page.message_2
 
@@ -84,4 +111,4 @@ def tick(current_page, princess_story_data, space_adventure_data):
         player_choice = get_choice(current_page.choices)
 
     next_page = current_page.choices_mapping[player_choice]
-    tick(next_page, princess_story_data, space_adventure_data)
+    tick(next_page, princess_story_data, space_adventure_data

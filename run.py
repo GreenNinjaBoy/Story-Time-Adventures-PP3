@@ -21,35 +21,35 @@ Returns: list: List of strings containing adventure data.
 """
 
 
-def load_adventure_data(file_path):
-   
+def load_adventure_data(file_path): 
     with open(file_path, 'r') as file:
         adventure_data = file.readlines()
     return adventure_data
+
 
 """
 Load princess story data from a text file and return it as a list of strings.
 Args: file_path (str): Path to the text file containing princess story data.
 Returns: list: List of strings containing princess story data.
 """
-
 def load_princess_story(file_path):
     
     with open(file_path, 'r') as file:
         princess_story_data = file.read().splitlines()
     return princess_story_data
 
- """
+
+"""
 Load space adventure data from a text file and return it as a list of strings.
 Args:file_path (str): Path to the text file containing space adventure data.
 Returns:list: List of strings containing space adventure data.
 """
-
 def load_space_adventure(file_path):
    
     with open(file_path, 'r') as file:
         space_adventure_data = file.readlines()
     return space_adventure_data
+
 
 """
 Display the introduction message for the game.
@@ -63,6 +63,7 @@ def intro_to_game():
     print_slow("Where the choices you make help tell the story!")
     print_slow("You can get a grown-up to help you on your adventure!")
     print_slow("Now we have two great adventure stories for you to read:")
+
 
 """
   Main function to start the game.
