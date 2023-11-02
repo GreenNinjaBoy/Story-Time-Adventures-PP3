@@ -9,6 +9,7 @@ from space_adventure import sa_page_1
 Initialize the Storybook object with a list of pages.
 Args: pages (list): List of Page objects representing the story pages.
 """
+
 class Storybook:
     def __init__(self, pages):
         self.pages = pages
@@ -18,6 +19,7 @@ Load adventure data from a text file and return it as a list of strings.
 Args: file_path (str): Path to the text file containing adventure data.
 Returns: list: List of strings containing adventure data.
 """
+
 
 def load_adventure_data(file_path):
    

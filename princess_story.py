@@ -1,5 +1,10 @@
 from pages import Page
 
+"""
+Load princess story data from a text file and return it as a list of strings.
+Args: file_path (str): Path to the text file containing princess story data.
+Returns: list: List of strings containing princess story data.
+"""
 
 def load_princess_story(file_path):
     with open(file_path, 'r') as file:
@@ -9,6 +14,10 @@ def load_princess_story(file_path):
 
 princess_story_file_path = 'princess_story.txt'
 princess_story = load_princess_story(princess_story_file_path)
+
+# each pa_page below will extract assigned message from princess.txt
+# each pa_page will display choices to the user to select.
+# depending on the users answer they will be redirect to the corrisponding pa_page
 
 pa_page_9 = Page(
     message=princess_story[78:83],
