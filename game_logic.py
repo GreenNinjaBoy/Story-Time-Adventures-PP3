@@ -1,10 +1,17 @@
 import time
-from princess_story import princess_story_data
-from termcolor import colored  # Import colored function for colorful output
-import images
+import sys
+from pages import Page
 
 
-def print_slow(text,):
+def load_princess_story(file_path):
+    with open(file_path, 'r') as file:
+        princess_story_data = file.readlines()
+    return princess_story_data
+princess_story_file_path = 'princess_story.txt'
+princess_story = load_princess_story(princess_story_file_path)
+
+
+def print_slow(text):
     for letter in text:
         print(letter, end='', flush=True)
         time.sleep(0.05)
@@ -12,51 +19,31 @@ def print_slow(text,):
 
 
 def get_choice(choices):
+    for choice in choices:
+        print(choice)
+    print("Please select a choice")
+    try:
+        choice = int(input())
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        return get_choice(choices)
+    return choice
+
+
+def get_yes_or_no_choice():
+    print("Please enter 'y' for Yes or 'n' for No")
     while True:
-        try:
-            user_input = int(input("Please enter your choice: "))
-            if user_input in choices:
-                return user_input
-            else:
-                print("Invalid choice. Please try again.")
-        except ValueError:
-            print("Invalid input. Please enter a number.")
-
-
-def display_image(images, image_path):
-    ascii_art = images.get(image_path)
-    if ascii_art:
-        print(ascii_art)
-    else:
-        print(f"Image '{image_path}' not found.")
-
-
-def start_interactive_story(story_data):
-    current_page = 1
-
-    while current_page:
-        page = story_data.get(current_page)
-        if page:
-            print_slow(page.get('prompt_before_image', ''))
-            image_path = page.get('image_path')
-            if image_path:
-                # Pass the images dictionary and image_path
-                display_image(images.images, image_path)
-            print_slow(page.get('prompt_after_image', ''))
-            print_slow(page.get('prompt', ''))
-            if page['choices']:
-                print("Choices:")
-                for choice, data in page['choices'].items():
-                    print_slow(f"{choice}. {data['text']}")
-                user_choice = get_choice(page['choices'])
-                current_page = page['choices'][user_choice]['destination']
-            else:
-                if 'conclusion' in page:
-                    print_slow(page['conclusion'])
-                else:
-                    print_slow("The End.")
-                current_page = 0
+        choice = input().lower()
+        if choice == 'y' or choice == 'n':
+            return choice
         else:
-            print_slow(
-                "Invalid page configuration. The story cannot continue.")
-            current_page = 0
+            print("Invalid input. Please enter 'y' or 'n'.")
+
+def tick(current_page, princess_story_data, space_adventure_data):
+    message_1 = current_page.message
+    message_2 = current_page.message_2
+
+    player_choice = get_choice(current_page.choices)
+
+    next_page = current_page.choices_mapping[player_choice]
+    tick(next_page, princess_story_data, space_adventure_data)
