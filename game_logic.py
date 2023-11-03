@@ -111,4 +111,4 @@ def tick(current_page, princess_story_data, space_adventure_data):
         player_choice = get_choice(current_page.choices)
 
     next_page = current_page.choices_mapping[player_choice]
-    tick(next_page, princess_story_data, space_adventure_data
+    tick(next_page, princess_story_data, space_adventure_data)
