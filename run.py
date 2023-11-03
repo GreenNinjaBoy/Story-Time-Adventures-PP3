@@ -262,7 +262,7 @@ pa_page_4 = Page(
 )
 
 pa_page_3 = Page(
-    message=princess_story[19:22],
+    message=cprint(princess_story[19:22], 'green'),
     message_2=None,
     choices=["1. A wise old owl perched on a tree:", "2. A friendly group of singing squirrels"],
     choices_mapping={1: pa_page_4, 2: pa_page_5}
@@ -277,7 +277,7 @@ pa_page_2 = Page(
 
 
 pa_page_1 = Page(
-    message=princess_story[0:6],
+    message=princess_story[0:14],
     message_2=None,
     choices=["1. Chase after the bird immediately.", 
              "2. Ask her loyal royal pet, a talking rabbit named Clover, for advice."],
