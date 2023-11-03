@@ -2,7 +2,6 @@ import time
 import sys
 from termcolor import colored, cprint
 from pyfiglet import Figlet
-from pages import Page
 
 
 def load_princess_story(file_path):
