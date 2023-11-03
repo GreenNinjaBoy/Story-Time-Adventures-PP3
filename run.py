@@ -63,7 +63,6 @@ def get_choice(choices):
     Returns: 
         int: User's choice as an integer.
     """
-    print("Available choices:")
     for idx, choice in enumerate(choices, start=1):
         print(f"{idx}. {choice}")
     print("Please select a choice (1 or 2)")
@@ -77,21 +76,6 @@ def get_choice(choices):
     except ValueError:
         print("Invalid input. Please enter a number.")
         return get_choice(choices)
-
-
-def get_yes_or_no_choice():
-    """
-    Get user input for Yes/No choices and validate it.
-    Returns:
-        str: 'y' for Yes, 'n' for No.
-    """
-    print("Please enter 'y' for Yes or 'n' for No")
-    while True:
-        choice = input().lower()
-        if choice == 'y' or choice == 'n':
-            return choice
-        else:
-            print("Invalid input. Please enter 'y' or 'n'.")
 
 
 def tick(current_page, princess_story_data, space_adventure_data):
@@ -278,16 +262,16 @@ pa_page_2 = Page(
 pa_page_1 = Page(
     message=princess_story[0:14],
     message_2=None,
-    choices=["1. Chase after the bird immediately.", 
-             "2. Ask her loyal royal pet, a talking rabbit named Clover, for advice."],
+    choices=["Chase after the bird immediately.", 
+             "Ask her loyal royal pet, a talking rabbit named Clover, for advice."],
     choices_mapping={1: pa_page_2, 2: pa_page_3}
 )
 
 
 page_1 = Page(
-    message="Select an Adventure:",
+    message="Please pick one to start your adventure!!:",
     message_2=None,
-    choices=["1: The Brave Princess", "2: The Cosmic Space Adventure"],
+    choices=["The Brave Princess", "The Cosmic Space Adventure"],
     choices_mapping={1: pa_page_1, 2: sa_page_1}
 )
 
