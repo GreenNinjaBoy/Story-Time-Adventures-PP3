@@ -44,16 +44,20 @@ Args: choices (list): List of choices for the user.
 Returns: int: User's choice as an integer.
 """
 def get_choice(choices):
-    
-    for choice in choices:
-        print(choice)
-    print("Please select a choice")
+    print("Available choices:")
+    for idx, choice in enumerate(choices, start=1):
+        print(f"{idx}. {choice}")
+    print("Please select a choice (1 or 2)")
     try:
         choice = int(input())
+        if choice in [1, 2]:
+            return choice
+        else:
+            print("Invalid input. Please enter 1 or 2.")
+            return get_choice(choices)
     except ValueError:
         print("Invalid input. Please enter a number.")
         return get_choice(choices)
-    return choice
 
 
 """
