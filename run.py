@@ -63,19 +63,19 @@ def get_choice(choices):
     Returns: 
         int: User's choice as an integer.
     """
-    for idx, choice in enumerate(choices, start=1):
-        print(f"{idx}. {choice}")
-    print("Please select a choice (1 or 2)")
-    try:
-        choice = int(input())
-        if choice in [1, 2]:
-            return choice
-        else:
-            print("Invalid input. Please enter 1 or 2.")
-            return get_choice(choices)
-    except ValueError:
-        print("Invalid input. Please enter a number.")
-        return get_choice(choices)
+    while True:
+        print('')
+        for idx, choice in enumerate(choices, start=1):
+            print(f"{idx}. {choice}")
+        print("Please select a choice (1 or 2)")
+        try:
+            choice = int(input())
+            if choice in [1, 2]:
+                return choice
+            else:
+                print("Invalid input. Please enter 1 or 2.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
 
 
 def tick(current_page, princess_story_data, space_adventure_data):
@@ -112,12 +112,8 @@ def tick(current_page, princess_story_data, space_adventure_data):
         print_slow("Thanks for playing!")
         sys.exit()
 
-    if current_page.choices == ['y', 'n']:
-        player_choice = get_yes_or_no_choice()
-    else:
-        print("")  # Add a newline character before printing choices
-        player_choice = get_choice(current_page.choices)
-
+    
+    player_choice = get_choice(current_page.choices)
     next_page = current_page.choices_mapping[player_choice]
     print()  # Add a line break after the user's input
     tick(next_page, princess_story_data, space_adventure_data)
