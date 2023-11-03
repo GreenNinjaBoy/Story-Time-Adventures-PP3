@@ -64,6 +64,23 @@ def intro_to_game():
     print_slow("You can get a grown-up to help you on your adventure!")
     print_slow("Now we have two great adventure stories for you to read:")
 
+page_1 = Page(
+    message="Select an Adventure:",
+    message_2=None,
+    choices=["1: The Brave Princess", "2: The Cosmic Space Adventure"],
+    choices_mapping={1: pa_page_1, 2: sa_page_1}
+)
+
+story = Storybook([page_1,
+                   pa_page_1,
+                   pa_page_2,
+                   pa_page_3,
+                   pa_page_4,
+                   pa_page_5,
+                   pa_page_6,
+                   pa_page_7,
+                   pa_page_8,
+                   pa_page_9])
 
 """
   Main function to start the game.
