@@ -90,8 +90,6 @@ def tick(current_page, story_title, princess_story_data, space_adventure_data):
     message_1 = current_page.message
     message_2 = current_page.message_2
 
-    if message_1 == "Please pick one to start your adventure!!:":
-        print_slow(f"Welcome to {story_title}!\n")
 
     if isinstance(message_1, list):
         for line in message_1:
@@ -137,10 +135,15 @@ def get_name():
     """
     Prompts the user to enter their name and returns it.
     """
-    user_name = input("Now brave adventurer, what is your name?: ")
-    return user_name
+    while True:
+        user_name = input("Now brave adventurer, what is your name?: ")
+        if user_name.isalpha():
+            return user_name
+        else:
+            print("Sorry, only letters A-Z and a-z are allowed.")
 
 f = Figlet(font='slant')
+p = Figlet(font="puffy")
 
 def intro_to_game():
     """
@@ -260,7 +263,7 @@ pa_page_2 = Page(
 
 
 pa_page_1 = Page(
-    message=princess_story[0:14],
+    message=princess_story[0:8],
     message_2=None,
     choices=["Chase after the bird immediately.", "Ask her loyal royal pet, a talking rabbit named Clover, for advice."],
     choices_mapping={1: pa_page_2, 2: pa_page_3}
@@ -298,7 +301,7 @@ def main():
     # Get the user's choice of story and story title
     choice = get_choice(["1. The Brave Princess", "2. The Cosmic Space Adventure"])
     story_title = "The Brave Princess" if choice == 1 else "The Cosmic Space Adventure"
-    print(colored(f.renderText(story_title), color="green"))
+    print(colored(p.renderText(story_title), color="magenta"))
     
     # Start the selected story
     if choice == 1:
