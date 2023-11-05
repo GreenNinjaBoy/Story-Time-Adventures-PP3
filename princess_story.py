@@ -1,4 +1,6 @@
+from run import user_name
 from pages import Page
+
 
 pa_page_9 = Page(
     message='page 9',

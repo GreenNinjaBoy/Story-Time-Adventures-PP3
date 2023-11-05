@@ -39,6 +39,19 @@ def get_choice(choices):
         except ValueError:
             print("Invalid input. Please enter a number.")
 
+user_name = None
+
+def get_name():
+    """
+    Prompts the user to enter their name and returns it.
+    """
+    while True:
+        user_name = input("Now brave adventurer, what is your name?: ")
+        if user_name.isalpha():
+            return user_name
+        else:
+            print("Sorry, only letters A-Z and a-z are allowed.")
+
 
 def tick(current_page, story_title):
     """
@@ -91,16 +104,7 @@ class Storybook:
         self.pages = pages
 
 
-def get_name():
-    """
-    Prompts the user to enter their name and returns it.
-    """
-    while True:
-        user_name = input("Now brave adventurer, what is your name?: ")
-        if user_name.isalpha():
-            return user_name
-        else:
-            print("Sorry, only letters A-Z and a-z are allowed.")
+
 
 f = Figlet(font='slant')
 p = Figlet(font="puffy")
