@@ -11,7 +11,7 @@ def load_princess_story(file_path):
         file_path (str): Path to the text file containing princess story data.
     Returns:
         list: List of strings containing princess story data.
-    """    
+    """
     with open(file_path, 'r') as file:
         princess_story_data = file.read().splitlines()
     return princess_story_data
@@ -24,7 +24,7 @@ def load_adventure_data(file_path):
         file_path (str): Path to the text file containing adventure data.
     Returns:
         list: List of strings containing adventure data.
-    """    
+    """
     with open(file_path, 'r') as file:
         adventure_data = file.readlines()
     return adventure_data
@@ -37,10 +37,10 @@ def load_space_adventure(file_path):
         file_path (str): Path to the text file containing space adventure data.
     Returns:
         list: List of strings containing space adventure data.
-    """    
+    """
     with open(file_path, 'r') as file:
         space_adventure_data = file.readlines()
-    return space_adventure_data      
+    return space_adventure_data
 
 
 def print_slow(text):
@@ -58,9 +58,9 @@ def print_slow(text):
 def get_choice(choices):
     """
     Get user input for choices and validate it.
-    Args: 
+    Args:
         choices (list): List of choices for the user.
-    Returns: 
+    Returns:
         int: User's choice as an integer.
     """
     while True:
@@ -78,29 +78,33 @@ def get_choice(choices):
             print("Invalid input. Please enter a number.")
 
 
-def tick(current_page, princess_story_data, space_adventure_data):
+def tick(current_page, story_title, princess_story_data, space_adventure_data):
     """
     Display the story messages and handle user interactions recursively.
     Args:
         current_page (Page): The current page of the story.
+        story_title (str): The title of the current story.
         princess_story_data (list): List of strings containing princess story data.
         space_adventure_data (list): List of strings containing space adventure data.
     """
     message_1 = current_page.message
     message_2 = current_page.message_2
 
+    if message_1 == "Please pick one to start your adventure!!:":
+        print_slow(f"Welcome to {story_title}!\n")
+
     if isinstance(message_1, list):
         for line in message_1:
             print_slow(line)
-            time.sleep(0.1) 
+            time.sleep(0.1)
     else:
         print_slow(message_1)
 
     if isinstance(message_2, list):
         for line in message_2:
-            print_slow(line) 
+            print_slow(line)
     elif message_2:
-        print_slow(message_2)  
+        print_slow(message_2)
 
     if current_page.choices is None:
         print_slow("Thanks for playing!")
@@ -109,53 +113,53 @@ def tick(current_page, princess_story_data, space_adventure_data):
     if current_page.choices == ['end_game']:
         end_game_message = ''.join(princess_story_data[87:98])
         print_slow(end_game_message)
-        print_slow("Thanks for playing!")
+        print_slow("\nThanks for playing!")
         sys.exit()
 
-    
     player_choice = get_choice(current_page.choices)
     next_page = current_page.choices_mapping[player_choice]
     print()  # Add a line break after the user's input
-    tick(next_page, princess_story_data, space_adventure_data)
+    tick(next_page, story_title, princess_story_data, space_adventure_data)
 
-def main():
-    """
-    Main function to start the game.
-    """
-    intro_to_game()
-    princess_story_data = load_princess_story('princess_story.txt')
-    space_adventure_data = load_space_adventure('space_adventure.txt')
-    tick(story.pages[0], princess_story_data, space_adventure_data)
-    print()  # Add a line break after the story finishes
-    print()  # Add a line break before next part of story starts
 
 class Storybook:
     """
     Initialize the Storybook object with a list of pages.
-    Args: 
+    Args:
         pages (list): List of Page objects representing the story pages.
     """
+
     def __init__(self, pages):
         self.pages = pages
 
+
+def get_name():
+    """
+    Prompts the user to enter their name and returns it.
+    """
+    user_name = input("Now brave adventurer, what is your name?: ")
+    return user_name
+
+f = Figlet(font='slant')
 
 def intro_to_game():
     """
     Display the introduction message for the game.
     """
-    f = Figlet(font='slant')
-    print(colored(f.renderText('Story Time Adventure'), color="green"))
-    cprint("-----------Made By Jamie Connell 2023 -----------", 'yellow')
+    print(colored(f.renderText('Story Time Adventures'), color="green"))
+    cprint("----------- Made By Jamie Connell 2023 -----------", 'yellow')
     print_slow(colored('Welcome to Story Time Adventures', color="red"))
     print_slow("Where the choices you make help tell the story!")
     print_slow("You can get a grown-up to help you on your adventure!")
-    print_slow("Now we have two great adventure stories for you to read:")
+    user_name = get_name()
+    print_slow(f'Welcome {user_name}, we have two great adventure stories for you to read:')
 
 
 class Page:
     """
     Represents a page in the story.
     """
+
     def __init__(self, message, message_2=None, choices=None, choices_mapping=None):
         self.message = message
         self.message_2 = message_2
@@ -181,7 +185,7 @@ sa_page_6 = Page(
 
 sa_page_4 = Page(
     message=space_adventure[16:20],
-    choices=["1. Do you want to have a candy feast?:", "2. Or do you want to visit the Candy Planet inhabitants?:"],
+    choices=["1. Do you want to have a candy feast?", "2. Or do you want to visit the Candy Planet inhabitants?"],
     choices_mapping={1: sa_page_8, 2: sa_page_10}
 )
 
@@ -191,13 +195,13 @@ sa_page_3 = Page(
 
 sa_page_2 = Page(
     message=space_adventure[11:15],
-    choices=["1. Do you want to land on the Candy Planet?:", "2. Do you want to chase the sparkling comets?:"],
+    choices=["1. Do you want to land on the Candy Planet?", "2. Do you want to chase the sparkling comets?"],
     choices_mapping={1: sa_page_4, 2: sa_page_6}
 )
 
 sa_page_1 = Page(
     message=space_adventure[0:9],
-    choices=["1. Would you like to explore the glittering Stardust Galaxy:", "2. or would you prefer to investigate the mysterious Nebula Nebula:"],
+    choices=["1. Would you like to explore the glittering Stardust Galaxy?", "2. Or would you prefer to investigate the mysterious Nebula Nebula?"],
     choices_mapping={1: sa_page_2, 2: sa_page_3}
 )
 
@@ -258,8 +262,7 @@ pa_page_2 = Page(
 pa_page_1 = Page(
     message=princess_story[0:14],
     message_2=None,
-    choices=["Chase after the bird immediately.", 
-             "Ask her loyal royal pet, a talking rabbit named Clover, for advice."],
+    choices=["Chase after the bird immediately.", "Ask her loyal royal pet, a talking rabbit named Clover, for advice."],
     choices_mapping={1: pa_page_2, 2: pa_page_3}
 )
 
@@ -291,7 +294,17 @@ def main():
     intro_to_game()
     princess_story_data = load_princess_story('princess_story.txt')
     space_adventure_data = load_space_adventure('space_adventure.txt')
-    tick(story.pages[0], princess_story_data, space_adventure_data)
+    
+    # Get the user's choice of story and story title
+    choice = get_choice(["1. The Brave Princess", "2. The Cosmic Space Adventure"])
+    story_title = "The Brave Princess" if choice == 1 else "The Cosmic Space Adventure"
+    print(colored(f.renderText(story_title), color="green"))
+    
+    # Start the selected story
+    if choice == 1:
+        tick(pa_page_1, story_title, princess_story_data, space_adventure_data)
+    elif choice == 2:
+        tick(sa_page_1, story_title, princess_story_data, space_adventure_data)
 
 
 if __name__ == '__main__':
