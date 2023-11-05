@@ -9,11 +9,7 @@ What will princess Lily do?
 
 #pa_page_2 of the user story
 
-Princess Lily decided to chase after the bird immediately. 
-She ran as fast as she could, her golden dress billowing in the wind. 
-Deep into the enchanted forest, 
-she found herself at a magical clearing filled with talking animals.
-Who should Princess Lily seek help from?
+Princess Lily decided to chase after the bird immediately. She ran as fast as she could, her golden dress billowing in the wind. Deep into the enchanted forest, she found herself at a magical clearing filled with talking animals. Who should Princess Lily seek help from?
 
 #pa_page_3 of the user story
 
