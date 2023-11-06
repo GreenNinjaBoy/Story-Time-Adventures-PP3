@@ -39,7 +39,8 @@ def get_choice(choices):
         except ValueError:
             print("Invalid input. Please enter a number.")
 
-def get_name(prompt):
+
+def get_name(name):
     """
     Prompts the user to enter their name and returns it.
     Args:
@@ -48,11 +49,13 @@ def get_name(prompt):
         str: The user's name.
     """
     while True:
-        user_name = input(prompt)
-        if user_name.isalpha():
-            return user_name
+        name = input(name)
+        if name.isalpha():
+            return name
         else:
             print("Sorry, only letters A-Z and a-z are allowed.")
+
+user_name = get_name
 
 def tick(current_page, story_title):
     """

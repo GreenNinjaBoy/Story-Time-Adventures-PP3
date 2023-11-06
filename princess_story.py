@@ -1,6 +1,7 @@
 from pages import Page
-from run import user_name
+from run import user_name, get_name
 
+user_name = get_name
 
 pa_page_9 = Page(
     message='page 9',
@@ -60,8 +61,7 @@ pa_page_2 = Page(
 
 
 pa_page_1 = Page(
-    message='Once upon a time, in a faraway kingdom,'
-    f'there lived a kind and brave princess named {user_name}.'
+    message=f"Once upon a time, in a faraway kingdom,there lived a kind and brave princess named {user_name}."
     f'Princess {user_name} had a magical crown that granted her the power to make the kingdom flourish.' 
     'One sunny day, while playing in the royal garden,' 
     'a mischievous bird swooped down and snatched her crown,' 
