@@ -48,10 +48,10 @@ def create_pages(user_name):
     )
 
     pa_page_2 = Page(
-        message=f'Princess {user_name} decided to chase after the bird immediately.' 
+        message=f'Princess {user_name} decided to chase after the bird immediately.'
                 f'She ran as fast as she could, her golden dress billowing in the wind.'
                 f'Deep into the enchanted forest,' 
-                f'she found herself at a magical clearing filled with talking animals.' 
+                f'she found herself at a magical clearing filled with talking animals.'
                 f'Who should Princess {user_name} seek help from?',
         message_2=None,
         choices=["1. A wise old owl perched on a tree:", "2. A friendly group of singing squirrels"],
@@ -60,7 +60,7 @@ def create_pages(user_name):
 
     pa_page_1 = Page(
         message=f"Once upon a time, in a faraway kingdom, there lived a kind and brave princess named {user_name}."
-                f'Princess {user_name} had a magical crown that granted her the power to make the kingdom flourish.' 
+                f'Princess {user_name} had a magical crown that granted her the power to make the kingdom flourish.'
                 f'One sunny day, while playing in the royal garden,' 
                 f'a mischievous bird swooped down and snatched her crown,' 
                 f'flying away into the enchanted forest'
@@ -71,3 +71,41 @@ def create_pages(user_name):
     )
 
     return pa_page_1, pa_page_2, pa_page_3, pa_page_4, pa_page_5, pa_page_6, pa_page_7, pa_page_8, pa_page_9
+
+
+def create_pages_2(user_name):
+    sa_page_10 = Page(
+        message="this is visit planet inhabitants story"
+    )
+
+    sa_page_8 = Page(
+        message="this is candy feast story"#
+    )
+
+    sa_page_6 = Page(
+        message="this is sparkling comets story"
+    )
+
+    sa_page_4 = Page(
+        message='page 4',
+        choices=["1. Do you want to have a candy feast?", "2. Or do you want to visit the Candy Planet inhabitants?"],
+        choices_mapping={1: sa_page_8, 2: sa_page_10}
+    )
+
+    sa_page_3 = Page(
+        message="or would you prefer to investigate"
+    )
+
+    sa_page_2 = Page(
+        message='page 3',
+        choices=["1. Do you want to land on the Candy Planet?", "2. Do you want to chase the sparkling comets?"],
+        choices_mapping={1: sa_page_4, 2: sa_page_6}
+    )
+
+    sa_page_1 = Page(
+        message=f'Once upon a time, in a spaceship traveling through the cosmos, there lived two intrepid space explorers named {user_name} and Cosmo.',
+        choices=["1. Would you like to explore the glittering Stardust Galaxy?", "2. Or would you prefer to investigate the mysterious Nebula Nebula?"],
+        choices_mapping={1: sa_page_2, 2: sa_page_3}
+    )
+
+    return sa_page_1, sa_page_2, sa_page_3, sa_page_4, sa_page_6,sa_page_8

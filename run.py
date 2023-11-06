@@ -3,7 +3,7 @@ import sys
 from termcolor import colored, cprint
 from pyfiglet import Figlet
 from pages import Page
-from princess_story import create_pages
+from story_index import create_pages, create_pages_2
 
 
 def print_slow(text):
@@ -66,7 +66,7 @@ def tick(current_page, story_title):
 
     if current_page.choices is None:
         print_slow(f"Princess {user_name} returned to the kingdom"),
-        print_slow("her crown safely back on her head. The kingdom rejoiced,"), 
+        print_slow("her crown safely back on her head. The kingdom rejoiced,"),
         print_slow("The king and queen praised her cleverness and bravery."),
         print_slow(f"Princess {user_name} shared the lessons she learned with the kingdom,"),
         print_slow("teaching everyone the importance of kindness and resourcefulness."),
@@ -129,41 +129,6 @@ def intro_to_game():
     print_slow(f'Welcome {user_name}, we have two great adventure stories for you to read:')
 
 
-sa_page_10 = Page(
-    message="this is visit planet inhabitants story"
-)
-
-sa_page_8 = Page(
-    message="this is candy feast story"
-)
-
-sa_page_6 = Page(
-    message="this is sparkling comets story"
-)
-
-sa_page_4 = Page(
-    message='page 4',
-    choices=["1. Do you want to have a candy feast?", "2. Or do you want to visit the Candy Planet inhabitants?"],
-    choices_mapping={1: sa_page_8, 2: sa_page_10}
-)
-
-sa_page_3 = Page(
-    message="or would you prefer to investigate"
-)
-
-sa_page_2 = Page(
-    message='page 3',
-    choices=["1. Do you want to land on the Candy Planet?", "2. Do you want to chase the sparkling comets?"],
-    choices_mapping={1: sa_page_4, 2: sa_page_6}
-)
-
-sa_page_1 = Page(
-    message='page 1',
-    choices=["1. Would you like to explore the glittering Stardust Galaxy?", "2. Or would you prefer to investigate the mysterious Nebula Nebula?"],
-    choices_mapping={1: sa_page_2, 2: sa_page_3}
-)
-
-
 def main():
     """
     Main function to start the game.
@@ -182,7 +147,7 @@ def main():
     if choice == 1:
         pages = create_pages(user_name)
     elif choice == 2:
-        print('Space Story')
+        pages = create_pages_2(user_name)
 
     # Start the selected story
     story = Storybook(pages, user_name)
