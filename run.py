@@ -3,7 +3,7 @@ import sys
 from termcolor import colored, cprint
 from pyfiglet import Figlet
 from pages import Page
-# from princess_story import  pa_page_1, pa_page_2, pa_page_3, pa_page_4, pa_page_5, pa_page_6, pa_page_7, pa_page_8, pa_page_9
+from princess_story import create_pages
 
 
 def print_slow(text):
@@ -65,7 +65,14 @@ def tick(current_page, story_title):
         print_slow(message_2)
 
     if current_page.choices is None:
-        print_slow("Thanks for playing!")
+        print_slow(f"Princess {user_name} returned to the kingdom"),
+        print_slow("her crown safely back on her head. The kingdom rejoiced,"), 
+        print_slow("The king and queen praised her cleverness and bravery."),
+        print_slow(f"Princess {user_name} shared the lessons she learned with the kingdom,"),
+        print_slow("teaching everyone the importance of kindness and resourcefulness."),
+        print_slow("And so, the tale of the Enchanted Princess and the Lost Crown spread far and wide,"),
+        print_slow("inspiring children to be resourceful and creative in the face of challenges."),
+        print(colored(p.renderText("The End"), color="magenta"))
         sys.exit()
 
     player_choice = get_choice(current_page.choices)
@@ -90,7 +97,23 @@ class Storybook:
 f = Figlet(font='slant')
 p = Figlet(font="puffy")
 
-user_name = None
+user_name = None  # Declare user_name as a global variable
+
+
+def get_name(prompt):
+    """
+    Prompts the user to enter their name and assigns it to the global variable user_name.
+    Args:
+        prompt (str): The prompt message to display to the user.
+    """
+    global user_name  # Declare user_name as a global variable
+    while True:
+        name = input(prompt)
+        if name.isalpha():
+            user_name = name  # Assign the input value to the global user_name variable
+            break
+        else:
+            print("Sorry, only letters A-Z and a-z are allowed.")
 
 
 def intro_to_game():
@@ -102,26 +125,8 @@ def intro_to_game():
     print_slow(colored('Welcome to Story Time Adventures', color="red"))
     print_slow("Where the choices you make help tell the story!")
     print_slow("You can get a grown-up to help you on your adventure!")
-    global user_name
-    user_name = get_name("Now brave adventurer, what is your name?: ")
+    get_name("Now brave adventurer, what is your name?")
     print_slow(f'Welcome {user_name}, we have two great adventure stories for you to read:')
-    return user_name
-
-
-def get_name(prompt):
-    """
-    Prompts the user to enter their name and returns it.
-    Args:
-        prompt (str): The prompt message to display to the user.
-    Returns:
-        str: The user's name.
-    """
-    while True:
-        name = input(prompt)
-        if name.isalpha():
-            return name
-        else:
-            print("Sorry, only letters A-Z and a-z are allowed.")
 
 
 sa_page_10 = Page(
@@ -166,7 +171,7 @@ def main():
     intro_to_game()
 
     # Get the user's choice of story and story title
-    choice = get_choice(["1. The Brave Princess", "2. The Cosmic Space Adventure"])
+    choice = get_choice(["The Brave Princess", "The Cosmic Space Adventure"])
     story_title = "The Brave Princess" if choice == 1 else "The Cosmic Space Adventure"
     if story_title == "1":
         print(colored(p.renderText(story_title), color="magenta"))
@@ -175,8 +180,7 @@ def main():
 
     # Import the pages for the selected story
     if choice == 1:
-        from princess_story import pa_page_1, pa_page_2, pa_page_3, pa_page_4, pa_page_5, pa_page_6, pa_page_7, pa_page_8, pa_page_9
-        pages = [pa_page_1, pa_page_2, pa_page_3, pa_page_4, pa_page_5, pa_page_6, pa_page_7, pa_page_8, pa_page_9]
+        pages = create_pages(user_name)
     elif choice == 2:
         print('Space Story')
 

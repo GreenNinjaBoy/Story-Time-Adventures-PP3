@@ -30,66 +30,31 @@ How should Princess Lily cross the river?
 
 #pa_page_5 of the user story
 
-Princess Lily approached the friendly group of singing squirrels. 
-The squirrels, impressed by her politeness, 
-shared their knowledge of the enchanted forest. 
-They told her about the mischievous bird's favorite hiding spots 
-and the secrets of the magical creatures living in the forest.
+Princess Lily approached the friendly group of singing squirrels. The squirrels, impressed by her politeness, shared their knowledge of the enchanted forest. They told her about the mischievous bird's favorite hiding spots and the secrets of the magical creatures living in the forest.
 
-With the squirrels' guidance, 
-Princess Lily set out to find her crown.
-As princess Lily continued her journey,
-She came to a river
+With the squirrels' guidance, Princess Lily set out to find her crown. As princess Lily continued her journey, She came to a river
 
 pa_page_6 of the user story
 
-Princess Lily discovered a magic lily pad by the riverbank.
-With a determined heart, she hopped onto the lily pad, 
-which carried her swiftly across the enchanted river.
-
-On the other side, 
-she followed the clues provided by the singing squirrels, 
-leading her straight to the mischievous bird's nest.
-
-What should Princess Lily do next?
+Princess Lily discovered a magic lily pad by the riverbank. With a determined heart, she hopped onto the lily pad, which carried her swiftly across the enchanted river. On the other side, she followed the clues provided by the singing squirrels, leading her straight to the mischievous bird's nest. What should Princess Lily do next?
 
 
 #pa_page_7 of the users story
 
-Princess Lily climbed onto the back of Willow, the river nymph. 
-With a swift and graceful glide, they crossed the enchanted river together. 
-On the other side, they found themselves in a magical grove 
-where the mischievous bird had built a nest.
-What should Princess Lily do next?
+Princess Lily climbed onto the back of Willow, the river nymph. With a swift and graceful glide, they crossed the enchanted river together. On the other side, they found themselves in a magical grove where the mischievous bird had built a nest. What should Princess Lily do next?
 
 
 #pa_page_8 of the user story 
 
-Princess Lily approached the bird and kindly asked for her crown back. 
-Surprised by Lily's kindness, the bird handed the crown over, realizing the error of its ways. 
-Grateful for Princess Lily's forgiveness, the bird promised never to be mischievous again.
+Princess Lily approached the bird and kindly asked for her crown back. Surprised by Lily's kindness, the bird handed the crown over, realizing the error of its ways. Grateful for Princess Lily's forgiveness, the bird promised never to be mischievous again.
 
 
 #pa_page_9 of user story
 
-Princess Lily decided to find a way to distract the bird. 
-Remembering the squirrels' advice, she sang a beautiful melody, 
-capturing the bird's attention. 
-While the bird was enchanted by the melody, 
-Princess Lily gently took her crown back.
+Princess Lily decided to find a way to distract the bird. Remembering the squirrels' advice, she sang a beautiful melody, capturing the bird's attention. While the bird was enchanted by the melody, Princess Lily gently took her crown back.
 
 
 #Story Conclusiuon
 
-Princess Lily returned to the kingdom, 
-her crown safely back on her head. 
-The kingdom rejoiced, 
-The king and queen praised her cleverness and bravery. 
-Princess Lily shared the lessons she learned with the kingdom, 
-teaching everyone the importance of kindness and resourcefulness.
-
-And so, the tale of the Enchanted Princess and the Lost Crown 
-spread far and wide, 
-inspiring children to be resourceful and 
-creative in the face of challenges.
+Princess Lily returned to the kingdom, her crown safely back on her head. The kingdom rejoiced, The king and queen praised her cleverness and bravery. Princess Lily shared the lessons she learned with the kingdom, teaching everyone the importance of kindness and resourcefulness. And so, the tale of the Enchanted Princess and the Lost Crown spread far and wide, inspiring children to be resourceful and creative in the face of challenges.
 
