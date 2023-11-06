@@ -1,7 +1,5 @@
 from pages import Page
-from run import user_name, get_name
-
-user_name = get_name
+from run import user_name
 
 pa_page_9 = Page(
     message='page 9',

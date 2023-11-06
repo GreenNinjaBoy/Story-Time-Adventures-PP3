@@ -5,6 +5,7 @@ from pyfiglet import Figlet
 from pages import Page
 # from princess_story import  pa_page_1, pa_page_2, pa_page_3, pa_page_4, pa_page_5, pa_page_6, pa_page_7, pa_page_8, pa_page_9
 
+
 def print_slow(text):
     """
     Print a text slowly, one character at a time, to create a typewriter effect.
@@ -39,23 +40,6 @@ def get_choice(choices):
         except ValueError:
             print("Invalid input. Please enter a number.")
 
-
-def get_name(name):
-    """
-    Prompts the user to enter their name and returns it.
-    Args:
-        prompt (str): The prompt message to display to the user.
-    Returns:
-        str: The user's name.
-    """
-    while True:
-        name = input(name)
-        if name.isalpha():
-            return name
-        else:
-            print("Sorry, only letters A-Z and a-z are allowed.")
-
-user_name = get_name
 
 def tick(current_page, story_title):
     """
@@ -106,6 +90,9 @@ class Storybook:
 f = Figlet(font='slant')
 p = Figlet(font="puffy")
 
+user_name = None
+
+
 def intro_to_game():
     """
     Display the introduction message for the game.
@@ -115,8 +102,26 @@ def intro_to_game():
     print_slow(colored('Welcome to Story Time Adventures', color="red"))
     print_slow("Where the choices you make help tell the story!")
     print_slow("You can get a grown-up to help you on your adventure!")
+    global user_name
     user_name = get_name("Now brave adventurer, what is your name?: ")
     print_slow(f'Welcome {user_name}, we have two great adventure stories for you to read:')
+    return user_name
+
+
+def get_name(prompt):
+    """
+    Prompts the user to enter their name and returns it.
+    Args:
+        prompt (str): The prompt message to display to the user.
+    Returns:
+        str: The user's name.
+    """
+    while True:
+        name = input(prompt)
+        if name.isalpha():
+            return name
+        else:
+            print("Sorry, only letters A-Z and a-z are allowed.")
 
 
 sa_page_10 = Page(
@@ -178,6 +183,7 @@ def main():
     # Start the selected story
     story = Storybook(pages, user_name)
     tick(story.pages[0], story_title)
+
 
 if __name__ == '__main__':
     main()
