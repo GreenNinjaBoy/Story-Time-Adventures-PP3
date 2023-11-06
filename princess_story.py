@@ -1,4 +1,6 @@
 from pages import Page
+from run import user_name
+
 
 pa_page_9 = Page(
     message='page 9',
@@ -59,12 +61,12 @@ pa_page_2 = Page(
 
 pa_page_1 = Page(
     message='Once upon a time, in a faraway kingdom,'
-    'there lived a kind and brave princess named Lily.'
-    'Princess Lily had a magical crown that granted her the power to make the kingdom flourish.' 
+    f'there lived a kind and brave princess named {user_name}.'
+    f'Princess {user_name} had a magical crown that granted her the power to make the kingdom flourish.' 
     'One sunny day, while playing in the royal garden,' 
     'a mischievous bird swooped down and snatched her crown,' 
     'flying away into the enchanted forest'
-    'What will princess Lily do?',
+    f'What will princess {user_name} do?',
     message_2=None,
     choices=["Chase after the bird immediately.", "Ask her loyal royal pet, a talking rabbit named Clover, for advice."],
     choices_mapping={1: pa_page_2, 2: pa_page_3}

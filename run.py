@@ -3,7 +3,7 @@ import sys
 from termcolor import colored, cprint
 from pyfiglet import Figlet
 from pages import Page
-from princess_story import   pa_page_1, pa_page_2, pa_page_3, pa_page_4, pa_page_5, pa_page_6, pa_page_7, pa_page_8, pa_page_9
+# from princess_story import  pa_page_1, pa_page_2, pa_page_3, pa_page_4, pa_page_5, pa_page_6, pa_page_7, pa_page_8, pa_page_9
 
 def print_slow(text):
     """
@@ -39,19 +39,20 @@ def get_choice(choices):
         except ValueError:
             print("Invalid input. Please enter a number.")
 
-user_name = None
-
-def get_name():
+def get_name(prompt):
     """
     Prompts the user to enter their name and returns it.
+    Args:
+        prompt (str): The prompt message to display to the user.
+    Returns:
+        str: The user's name.
     """
     while True:
-        user_name = input("Now brave adventurer, what is your name?: ")
+        user_name = input(prompt)
         if user_name.isalpha():
             return user_name
         else:
             print("Sorry, only letters A-Z and a-z are allowed.")
-
 
 def tick(current_page, story_title):
     """
@@ -62,7 +63,6 @@ def tick(current_page, story_title):
     """
     message_1 = current_page.message
     message_2 = current_page.message_2
-
 
     if isinstance(message_1, list):
         for line in message_1:
@@ -81,16 +81,10 @@ def tick(current_page, story_title):
         print_slow("Thanks for playing!")
         sys.exit()
 
-    if current_page.choices == ['end_game']:
-        end_game_message = ''.join(princess_story_data[87:98])
-        print_slow(end_game_message)
-        print_slow("\nThanks for playing!")
-        sys.exit()
-
     player_choice = get_choice(current_page.choices)
     next_page = current_page.choices_mapping[player_choice]
     print()  # Add a line break after the user's input
-    tick(next_page, story_title,)
+    tick(next_page, story_title)
 
 
 class Storybook:
@@ -98,12 +92,12 @@ class Storybook:
     Initialize the Storybook object with a list of pages.
     Args:
         pages (list): List of Page objects representing the story pages.
+        user_name (str): The user's name.
     """
 
-    def __init__(self, pages):
+    def __init__(self, pages, user_name):
         self.pages = pages
-
-
+        self.user_name = user_name
 
 
 f = Figlet(font='slant')
@@ -118,7 +112,7 @@ def intro_to_game():
     print_slow(colored('Welcome to Story Time Adventures', color="red"))
     print_slow("Where the choices you make help tell the story!")
     print_slow("You can get a grown-up to help you on your adventure!")
-    user_name = get_name()
+    user_name = get_name("Now brave adventurer, what is your name?: ")
     print_slow(f'Welcome {user_name}, we have two great adventure stories for you to read:')
 
 
@@ -156,17 +150,6 @@ sa_page_1 = Page(
     choices_mapping={1: sa_page_2, 2: sa_page_3}
 )
 
-story = Storybook([
-                   pa_page_1,
-                   pa_page_2,
-                   pa_page_3,
-                   pa_page_4,
-                   pa_page_5,
-                   pa_page_6,
-                   pa_page_7,
-                   pa_page_8,
-                   pa_page_9])
-
 
 def main():
     """
@@ -181,15 +164,17 @@ def main():
         print(colored(p.renderText(story_title), color="magenta"))
     else:
         print(colored(p.renderText(story_title), color="blue"))
-    
 
-    
-    # Start the selected story
+    # Import the pages for the selected story
     if choice == 1:
-        tick(pa_page_1, story_title,)
+        from princess_story import pa_page_1, pa_page_2, pa_page_3, pa_page_4, pa_page_5, pa_page_6, pa_page_7, pa_page_8, pa_page_9
+        pages = [pa_page_1, pa_page_2, pa_page_3, pa_page_4, pa_page_5, pa_page_6, pa_page_7, pa_page_8, pa_page_9]
     elif choice == 2:
-        tick(sa_page_1, story_title,)
+        print('Space Story')
 
+    # Start the selected story
+    story = Storybook(pages, user_name)
+    tick(story.pages[0], story_title)
 
 if __name__ == '__main__':
     main()
