@@ -3,7 +3,7 @@ import sys
 from termcolor import colored, cprint
 from pyfiglet import Figlet
 from pages import Page
-from story_index import create_pages, create_pages_2, end_game_2
+from story_index import create_pages, create_pages_2, end_game_2, end_game_1
 
 
 def print_slow(text):

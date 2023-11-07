@@ -6,14 +6,23 @@ from pyfiglet import Figlet
 p = Figlet(font="puffy")
 
 
-def print_slow(text):
+def print_slow(text, line_length=60):
     """
-    Print a text slowly, one character at a time, to create a typewriter effect.
+    Print a text slowly, breaking it into multiple lines if it exceeds a certain length.
     Args:
         text (str): The text to be printed slowly.
+        line_length (int): Maximum number of characters in a line before breaking.
     """
-    for letter in text:
-        print(letter, end='', flush=True)
+    words = text.split()
+    current_line_length = 0
+    for word in words:
+        if current_line_length + len(word) + 1 <= line_length:
+            print(word, end=' ')
+            current_line_length += len(word) + 1
+        else:
+            print()
+            print(word, end=' ')
+            current_line_length = len(word)
         time.sleep(0.05)
     print()
 
