@@ -6,24 +6,32 @@ from pyfiglet import Figlet
 p = Figlet(font="puffy")
 
 
-def print_slow(text, line_length=60):
+def print_slow(text, line_length=80, letter_delay=0.05, word_delay=0.5):
     """
-    Print a text slowly, breaking it into multiple lines if it exceeds a certain length.
+    Print a text slowly with a typewriter effect, breaking it into multiple lines if it exceeds a certain length.
     Args:
         text (str): The text to be printed slowly.
         line_length (int): Maximum number of characters in a line before breaking.
+        letter_delay (float): Delay between printing individual letters.
+        word_delay (float): Delay between printing words.
     """
-    words = text.split()
     current_line_length = 0
-    for word in words:
+    for word in text.split():
         if current_line_length + len(word) + 1 <= line_length:
-            print(word, end=' ')
+            for letter in word:
+                print(letter, end='', flush=True)
+                time.sleep(letter_delay)
+            print(' ', end='', flush=True)
             current_line_length += len(word) + 1
         else:
-            print()
-            print(word, end=' ')
-            current_line_length = len(word)
-        time.sleep(0.05)
+            print('\n', end='', flush=True)
+            time.sleep(word_delay)
+            current_line_length = 0
+            for letter in word:
+                print(letter, end='', flush=True)
+                time.sleep(letter_delay)
+            print(' ', end='', flush=True)
+            current_line_length += len(word) + 1
     print()
 
 
@@ -184,13 +192,10 @@ def create_pages_2(user_name):
     )
 
     sa_page_1 = Page(
-        message=f"In a galaxy far, far away,"
-        f"there lived a curious young astronaut named {user_name}."
-        f"One day, while exploring a distant planet,"
-        f"{user_name}'s spaceship crashed,"
+        message=f"In a galaxy far, far away, there lived a curious young astronaut named {user_name}.    One day, while exploring a distant planet,   {user_name}'s spaceship crashed,"
         f"leaving them stranded on an unknown cosmic outpost."
-        f"{user_name} neede to think of a way to get back home."
-        f"How should {user_name} explore the outpost?",
+        f"{user_name} neede to think of a way to get back home.",
+        message_2=f"How should {user_name} explore the outpost?",
 
         choices=["1. Go deeper into the outpost to investigate mysterious sounds?", "2.Examine the nearby alien artifacts for clues."],
 
