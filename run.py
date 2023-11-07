@@ -3,7 +3,7 @@ import sys
 from termcolor import colored, cprint
 from pyfiglet import Figlet
 from pages import Page
-from story_index import create_pages, create_pages_2
+from story_index import create_pages, create_pages_2, end_game_2
 
 
 def print_slow(text):
@@ -64,15 +64,11 @@ def tick(current_page, story_title):
     elif message_2:
         print_slow(message_2)
 
-    if current_page.choices is None:
-        print_slow(f"Princess {user_name} returned to the kingdom"),
-        print_slow("her crown safely back on her head. The kingdom rejoiced,"),
-        print_slow("The king and queen praised her cleverness and bravery."),
-        print_slow(f"Princess {user_name} shared the lessons she learned with the kingdom,"),
-        print_slow("teaching everyone the importance of kindness and resourcefulness."),
-        print_slow("And so, the tale of the Enchanted Princess and the Lost Crown spread far and wide,"),
-        print_slow("inspiring children to be resourceful and creative in the face of challenges."),
-        print(colored(p.renderText("The End"), color="magenta"))
+    if current_page.choices == ['end_game_1']:
+        end_game_1(user_name)
+        sys.exit()
+    elif current_page.choices == ["end_game_2"]:
+        end_game_2(user_name)
         sys.exit()
 
     player_choice = get_choice(current_page.choices)
@@ -125,7 +121,7 @@ def intro_to_game():
     print_slow(colored('Welcome to Story Time Adventures', color="red"))
     print_slow("Where the choices you make help tell the story!")
     print_slow("You can get a grown-up to help you on your adventure!")
-    get_name("Now brave adventurer, what is your name?")
+    get_name("Now brave adventurer, what is your name? \n")
     print_slow(f'Welcome {user_name}, we have two great adventure stories for you to read:')
 
 

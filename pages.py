@@ -8,3 +8,5 @@ class Page:
         self.message_2 = message_2
         self.choices = choices
         self.choices_mapping = choices_mapping
+
+
