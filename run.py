@@ -2,9 +2,12 @@ import time
 import sys
 from termcolor import colored, cprint
 from pyfiglet import Figlet
-from pages import Page
 from story_index import create_pages, create_pages_2, end_game_2, end_game_1
 
+f = Figlet(font="slant")
+p = Figlet(font="puffy")
+
+user_name = None  # Declare user_name as a global variable
 
 def print_slow(text, line_length=80, letter_delay=0.05, word_delay=0.5):
     """
@@ -107,12 +110,6 @@ class Storybook:
     def __init__(self, pages, user_name):
         self.pages = pages
         self.user_name = user_name
-
-
-f = Figlet(font="slant")
-p = Figlet(font="puffy")
-
-user_name = None  # Declare user_name as a global variable
 
 
 def get_name(prompt):
