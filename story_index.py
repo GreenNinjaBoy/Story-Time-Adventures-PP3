@@ -32,6 +32,15 @@ def end_game_1(user_name):
 
 
 def create_pages(user_name):
+    """
+    Create pages for the Brave Princess Story.
+
+    Args:
+        user_name (str): The name of the player (Astronaut).
+
+    Returns:
+        A Page containing objects representing different story pages.
+    """
     pa_page_9 = Page(
         message=f"Princess {user_name} decided to find a way to distract the bird. Remembering the squirrels' advice, she sang a beautiful melody, capturing the bird's attention. While the bird was enchanted by the melody, Princess {user_name} gently took her crown back.",
         choices=["end_game_1"],
