@@ -9,50 +9,40 @@
 *Insert responsive Image here!!
 
 ## Content:
+[Wireframes and Goals](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#wireframes-and-goals)
+- [Lucid Chart](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#lucid-chart)
+- [Project Goals and Target Audience](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#project-goals-an-target-audience)
+	- [Goals achieved](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#goals-achieved)
+	- [Future Goals](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#future-goals)
+	- [Target Audience](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#target-audience)
 
- - **Wireframes and Goals**
-	 - Lucid Chart
-	 - Project Goals and Target Audience
- - Design and UX
-	 - Design and Features
-	 - Color Scheme
-	 - User Experience
-		 - User Stories
-			 - First Time Player
-			 - Returning Player
-		- Game Graphics
-	- Typography
-	- Imagery
- -   ### Technologies Used
-    
-	 - Frameworks, Packages & Programs Used 
+- [Design and Features](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#design-and-features)
+	- [color scheme](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#color-scheme)
+		 - [User Stories](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#user-stories)
+			- [First Time Player](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#first-time-visitor)
+			- [Returning Player](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#returning-visitor)
+	- [Game Graphics](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#game-graphics)
+	- [Typography](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#typography)
+[### Testing](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#testing-1)
+- [PEP8](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#pep8)     
+- [Bug testing](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#bug-testing)    
+- [Fixed bugs](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#fixed-bugs)
 
-### Testing
-    
-   -  [PEP8]   
-    - [W3 HTML Checker]    
-    - [CSS Checker]   
-    - [Contrast Checker] 
-    - [Lighthouse  
-    - Bug testing    
-    - [Responsiveness]    
-    - [Fixed bugs]
-    
- ### Deployment
-  - Generating template from github
-  - Setting up Virtual Code Space
-	  - Code Anywhere
-	  - GitPod  
-  - Deploy to Heroku
+- [### Deployment](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#deployment-1)
+	- [creating the repository](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#creating-the-repository)
+	- [cloning the repository](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#cloning-the-repository)
+	- [forking the repository](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#forking-the-repository)
+	- [Deploying using Heroku](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#deploying-using-heroku)
 
-### Credits    
-  -   Code   
-   -  Content   
-   -  Media
-    -  Acknowledgements
+- [### Credits](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#credits)    
+	- [Code](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#code)   
+	- [Content](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#content)  
+	- [Media](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#media)
+	- [Acknowledgements](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#acknowledgements)
 
+# Wireframes and Goals
 
-## Lucid Chart
+### Lucid Chart
 
 ### The Lucid chart was generated with the help of [LucidChart](https://www.lucidchart.com/pages/).
 
@@ -91,16 +81,16 @@ With that I decided have my target audience be parents with children aged 3-10, 
 ![termcolor options](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3/blob/main/assets/readme-images/termcolorpalette.png?raw=true)
 
 
-## User Experience (UX)
+## User Stories
 
-**First-Time Visitor**
+### First-Time Visitor
 
  - As a first time user, I want to understand the website's purpose clearly.
  - That the main point of the site introduces the game well.
  - Let the visitor start the game when they are ready.
  - That the game has different outcomes and is fun and captivating.
 
-**Returning Visitor**
+### Returning Visitor
 
  - Play the game again choose another path, try different inputs.
  - See if new content has been added to the game.
@@ -109,18 +99,25 @@ With that I decided have my target audience be parents with children aged 3-10, 
 
 Pyfiglet was used to design the ASC II text art display for the main game heading, story 1 heading, story 2 heading and "the end" message at the end of the stories.
 
- - Main game heading
+- Main game heading
+
 ![main game heading](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3/blob/main/assets/readme-images/main-game-title.png?raw=true)
- - Story 1 heading 
- 
+
+- Story 1 heading 
+
 ![The Brave Princess](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3/blob/main/assets/readme-images/story-1-title.png?raw=true)
- - Story 2 heading
+
+- Story 2 heading
+
 ![The Cosmic Space Adventure](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3/blob/main/assets/readme-images/story-2-title.png?raw=true)
- - Ending to Story 1
- ![Ending for Story 1](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3/blob/main/assets/readme-images/ending-image-2.png?raw=true)
  
- - Ending to Story 2
- - ![Ending for Story 2](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3/blob/main/assets/readme-images/endin-1-image.png?raw=true)
+- Ending to Story 1
+
+![Ending for Story 1](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3/blob/main/assets/readme-images/ending-image-2.png?raw=true)
+ 
+- Ending to Story 2
+
+![Ending for Story 2](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3/blob/main/assets/readme-images/endin-1-image.png?raw=true)
 
  
 
@@ -182,31 +179,34 @@ To do this the following steps were taken:
 **Cloning the Repository** 
  - Github can also be used to clone a repository so that the code can be altered and pushed back to the main repository using a different IDE.
 	 - This can be done by using the following steps.
-		 1.  In the " Story-Time-Adventures-PP3" repository, select the  green "code" tab.
-		 2. Select HTTPS in the dropdown menu.
-		 3. Copy the URL under HTTPS.
+1.  In the " Story-Time-Adventures-PP3" repository, select the  green "code" tab.
+2. Select HTTPS in the dropdown menu.
+3. Copy the URL under HTTPS.
 
 ![clone repository 1](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3/blob/main/assets/readme-images/pp3-clone-repository-image-1.png?raw=true)
-		 4. Open the IDE that you are working from for example [CodeAnywhere](https://app.codeanywhere.com/).
-		 5. Sign in using your Github details.
+
+4. Open the IDE that you are working from for example [CodeAnywhere](https://app.codeanywhere.com/).
+5. Sign in using your Github details.
+
 ![codeanywhere sign in](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3/blob/main/assets/readme-images/cloning-repository-image-2.png?raw=true)
 
 6. Click on the create new workspace button.
+
 ![create workspace image](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3/blob/main/assets/readme-images/cloning-repository-image-3.png?raw=true)
-		7.  Paste copied HTTPS and click create (Codeanywhere will now generate the virtual IDE).
+		
+7.  Paste copied HTTPS and click create (Codeanywhere will now generate the virtual IDE).
 ![create workspace image 2](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3/blob/main/assets/readme-images/pp3-clone-repository-image-4.png?raw=true)
-		8.  Once IDE has Loaded create inital index.html page and add test text.
-		9.  Once test text is added press  `Ctrl + S`  to save.
-		10.  Click terminal tab at top of screen and click new terminal.
-		11.  Once new terminal has opened test that content is being pushed back to github.
-		12.  In the terminal type  `git add .`  and press enter (this will add all new content).
-		13.  Then type  `git commit -m "add test text"`  and press enter (this lets anyone seeing your commits know what you have done).
-		14.  Once you have done that type  `git push`  and press enter (this will push all changes made to the github repository).
-		15.  Navigate to github.
-		16.  Choose the repository you were working on.
-		17.  Check the changes have been successfully pushed.
 
-
+8.  Once IDE has Loaded create inital index.html page and add test text.
+9.  Once test text is added press  `Ctrl + S`  to save.
+10.  Click terminal tab at top of screen and click new terminal.
+11.  Once new terminal has opened test that content is being pushed back to github.
+12.  In the terminal type  `git add .`  and press enter (this will add all new content).
+13.  Then type  `git commit -m "add test text"`  and press enter (this lets anyone seeing your commits know what you have done).
+14.  Once you have done that type  `git push`  and press enter (this will push all changes made to the github repository).
+15.  Navigate to github.
+16.  Choose the repository you were working on.
+17.  Check the changes have been successfully pushed.
 
 **Forking The Repository**
  - Github can also be used to fork a repository.
