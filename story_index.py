@@ -107,9 +107,10 @@ def create_pages(user_name):
         choices=[
             "Chase after the bird immediately.",
             "Ask her loyal royal pet, a talking rabbit named Clover, for advice.",
-        ],  
+        ],
+        choices_mapping={1: pa_page_2, 2: pa_page_3}  
     )
-    pa_page_1.choices_mapping={1: pa_page_2, 2: pa_page_3},
+    
 
     return (
         pa_page_1,
