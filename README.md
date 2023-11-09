@@ -23,7 +23,7 @@
 			- [Returning Player](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#returning-visitor)
 	- [Game Graphics](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#game-graphics)
 	- [Typography](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#typography)
-[### Testing](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#testing-1)
+[Testing](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#testing-1)
 - [PEP8](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#pep8)     
 - [Bug testing](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#bug-testing)    
 - [Fixed bugs](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#fixed-bugs)
