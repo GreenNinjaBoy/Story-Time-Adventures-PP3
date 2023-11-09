@@ -2,11 +2,11 @@
 
 # Story Time Adventures
 
-**Story Time Adventures is a text based story game where the story changes depending on the user's choices.**
+**Story Time Adventures is a text based story game where the users choices help tell the story.**
 
-**The link to the game can be found here**
+**The link to the game can be found [here](https://story-time-adventures-b1015c851bfd.herokuapp.com/)**
 
-*Insert responsive Image here!!
+![Am i responsive image](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3/blob/main/assets/readme-images/am-i-responsive-screenshot.png?raw=true)
 
 ## Content:
 [Wireframes and Goals](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3#wireframes-and-goals)
