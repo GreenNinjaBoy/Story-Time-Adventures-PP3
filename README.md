@@ -50,9 +50,8 @@
 	   
 ![Fluid Image](https://github.com/GreenNinjaBoy/story-time-adventures-PP3/blob/main/assets/readme-images/s-t-a-fluidchart.jpeg?raw=true)
 
-**This is the chart of the final game**
-
-### Insert new image here!!
+The completed version of the Story Time Adventure game has changed a lot during the development stages to the final submitted project.
+However during my time working on this project I referenced the above image as a base line to work from.
 
 
 ## Project Goals an Target Audience.
@@ -136,6 +135,11 @@ Pyfiglet was used to design the ASC II text art display for the main game headin
 
 Extensive testing was carried out by myself, you can access the test data [here](https://docs.google.com/spreadsheets/d/1vcUQSttZ6TobfRzjVdf8Ig_vR2vrup0FfERo7Dqe_Yo/edit#gid=0).
 
+Screenshots of the sheets can also be seen here:
+
+![function test](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3/blob/main/assets/readme-images/function-test.png?raw=true)
+
+![page movement test](https://github.com/GreenNinjaBoy/Story-Time-Adventures-PP3/blob/main/assets/readme-images/page-movement-test.png?raw=true)
  - This includes input checks by user.
  - The story progresses correctly depending on user input.
  - Ensure the overall story ending prints.
