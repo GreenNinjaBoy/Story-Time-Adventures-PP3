@@ -88,7 +88,7 @@ def intro_to_game():
     """
     print(colored(f.renderText("Story Time Adventures"), color=GREEN))
     cprint("----------- Made By Jamie Connell 2023 -----------", YELLOW)
-    print_slow(colored("Welcome to Story Time Adventures", color=RED))
+    print_slow("Welcome to Story Time Adventures")
     print_slow("Where the choices you make help tell the story!")
     print_slow("You can get a grown-up to help you on your adventure!")
     user_name = get_name("Now brave adventurer, what is your name? \n")

@@ -8,6 +8,15 @@ p = Figlet(font="puffy")
 
 
 def end_game_1(user_name):
+    """
+    End the game for the Enchanted Princess story.
+
+    Args:
+        user_name (str): The name of the player (Princess).
+
+    Returns:
+        None
+    """
     print_slow(f"Princess {user_name} returned to the kingdom")
     print_slow("her crown safely back on her head. The kingdom rejoiced,")
     print_slow("The king and queen praised her cleverness and bravery.")
@@ -23,6 +32,15 @@ def end_game_1(user_name):
 
 
 def create_pages(user_name):
+    """
+    Create pages for the Enchanted Princess story.
+
+    Args:
+        user_name (str): The name of the player (Princess).
+
+    Returns:
+        tuple: A tuple containing Page objects representing different story pages.
+    """
     pa_page_9 = Page(
         message=f"Princess {user_name} decided to find a way to distract the bird. Remembering the squirrels' advice, she sang a beautiful melody, capturing the bird's attention. While the bird was enchanted by the melody, Princess {user_name} gently took her crown back.",
         choices=["end_game_1"],
@@ -126,6 +144,15 @@ def create_pages(user_name):
 
 
 def end_game_2(user_name):
+    """
+    End the game for the Cosmic Space Adventure story.
+
+    Args:
+        user_name (str): The name of the player (Astronaut).
+
+    Returns:
+        None
+    """
     print_slow(f"{user_name}'s cosmic space adventure became legendary,")
     print_slow("inspiring generations of explorers to venture into the unknown.")
     print_slow("They became a hero, not just for Earth but for the entire galaxy,")
@@ -140,6 +167,15 @@ def end_game_2(user_name):
 
 
 def create_pages_2(user_name):
+    """
+    Create pages for the Cosmic Space Adventure story.
+
+    Args:
+        user_name (str): The name of the player (Astronaut).
+
+    Returns:
+        tuple: A tuple containing Page objects representing different story pages.
+    """
     sa_page_11 = Page(
         message=f"Inspired by the scholar's wisdom, {user_name} harnessed the crystal's energy to communicate with other intelligent life forms across the galaxy. This newfound ability opened up opportunities for peaceful diplomacy and understanding between different civilizations.",
         choices=["end_game_2"],
