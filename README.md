@@ -161,6 +161,7 @@ I was unable to implement this during this project, however it will be something
 - Another problem that was identified was that there was no line breaks between the story text and the choices presented to the user.
 	- Again this was resolved by amending the tick() function within my run.py file and tested to ensure it was working correctly.  
 
+To my knowledge there are no other known bugs
 # Deployment
 
 **Creating The Repository**
