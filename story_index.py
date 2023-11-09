@@ -32,15 +32,6 @@ def end_game_1(user_name):
 
 
 def create_pages(user_name):
-    """
-    Create pages for the Enchanted Princess story.
-
-    Args:
-        user_name (str): The name of the player (Princess).
-
-    Returns:
-        tuple: A tuple containing Page objects representing different story pages.
-    """
     pa_page_9 = Page(
         message=f"Princess {user_name} decided to find a way to distract the bird. Remembering the squirrels' advice, she sang a beautiful melody, capturing the bird's attention. While the bird was enchanted by the melody, Princess {user_name} gently took her crown back.",
         choices=["end_game_1"],
@@ -91,10 +82,8 @@ def create_pages(user_name):
     )
 
     pa_page_3 = Page(
-        message=(
-            f"Princess {user_name} decided to ask her loyal royal pet, Clover, for advice.Clover, with his sharp ",
+        message=f"Princess {user_name} decided to ask her loyal royal pet, Clover, for advice.Clover, with his sharp "
             "senses, suggested seeking help from the forest animals who were known to be wise.",
-        ),
         choices=[
             "A wise old owl perched on a tree:",
             "A friendly group of singing squirrels",
@@ -126,7 +115,7 @@ def create_pages(user_name):
             "Chase after the bird immediately.",
             "Ask her loyal royal pet, a talking rabbit named Clover, for advice.",
         ],
-        choices_mapping={1: pa_page_2, 2: pa_page_3}  
+        choices_mapping={1: pa_page_2, 2: pa_page_3}, 
     )
     
 
@@ -144,15 +133,6 @@ def create_pages(user_name):
 
 
 def end_game_2(user_name):
-    """
-    End the game for the Cosmic Space Adventure story.
-
-    Args:
-        user_name (str): The name of the player (Astronaut).
-
-    Returns:
-        None
-    """
     print_slow(f"{user_name}'s cosmic space adventure became legendary,")
     print_slow("inspiring generations of explorers to venture into the unknown.")
     print_slow("They became a hero, not just for Earth but for the entire galaxy,")
@@ -174,7 +154,7 @@ def create_pages_2(user_name):
         user_name (str): The name of the player (Astronaut).
 
     Returns:
-        tuple: A tuple containing Page objects representing different story pages.
+        A Page containing objects representing different story pages.
     """
     sa_page_11 = Page(
         message=f"Inspired by the scholar's wisdom, {user_name} harnessed the crystal's energy to communicate with other intelligent life forms across the galaxy. This newfound ability opened up opportunities for peaceful diplomacy and understanding between different civilizations.",

@@ -52,7 +52,6 @@ def tick(current_page, story_title, user_name):
     message_1 = current_page.message
 
     print_slow(message_1)
-    # TODO merge message_1 and message_2#
     
     if current_page.choices == ["end_game_1"]:
         end_game_1(user_name)
