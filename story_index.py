@@ -142,6 +142,15 @@ def create_pages(user_name):
 
 
 def end_game_2(user_name):
+    """
+    End the game for the Cosmic Space Adventure story.
+
+    Args:
+        user_name (str): The name of the player (Astronaut).
+
+    Returns:
+        None
+    """
     print_slow(f"{user_name}'s cosmic space adventure became legendary,")
     print_slow("inspiring generations of explorers to venture into the unknown.")
     print_slow("They became a hero, not just for Earth but for the entire galaxy,")
